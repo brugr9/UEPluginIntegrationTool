@@ -45,13 +45,11 @@ Supported Target Build Platforms: Windows (Win64)
 
 Documentation:
 
-* README: [https://brugr9.github.io/UEPluginIntegrationTool/](https://brugr9.github.io/UEPluginIntegrationTool/)
+* Readme / ThirdParty / Changelog: [https://github.com/brugr9/UEPluginIntegrationTool/](https://github.com/brugr9/UEPluginIntegrationTool/)
 
 Additional Notes:
 
 * Support: [https://github.com/brugr9/UEPluginIntegrationTool/discussions](https://github.com/brugr9/UEPluginIntegrationTool/discussions)
-* Third Party Libraries: [https://brugr9.github.io/UEPluginIntegrationTool/ThirdParty](https://brugr9.github.io/UEPluginIntegrationTool/ThirdParty)
-* CHANGELOG: [https://brugr9.github.io/UEPluginIntegrationTool/CHANGELOG](https://brugr9.github.io/UEPluginIntegrationTool/CHANGELOG)
 
 ## Tags
 
