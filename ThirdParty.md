@@ -1,4 +1,4 @@
-# Unreal Engine Plugin: Next-Gen Messaging &ndash; Third Party Libraries
+# Unreal Engine Plugin: Integration Tool &ndash; Third Party Libraries
 
 Plug-in Version: 1.0.0
 <br>Author: [brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
@@ -9,46 +9,71 @@ Plug-in Version: 1.0.0
 <!-- Start Document Outline -->
 
 * [1. nng](#1-nng)
-  * [1.1. License](#11-license)
-  * [1.2. Version](#12-version)
 * [2. nngpp](#2-nngpp)
-  * [2.1. License](#21-license)
-  * [2.2. Version](#22-version)
 * [A. References](#a-references)
 
 <!-- End Document Outline -->
 
 ## 1. nng
 
-This plug-in is using NNG™ Next generation of nanomsg™ software from [https://github.com/nanomsg/nng](https://github.com/nanomsg/nng).
+This plug-in makes use of *NNG™ Next generation of nanomsg™* software (MIT License).
 
-### 1.1. License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* MIT License
+* Source: [https://github.com/nanomsg/nng](https://github.com/nanomsg/nng)
 
-### 1.2. Version
-
-* Version: nng Release v1.5.2 from [https://github.com/nanomsg/nng/releases/tag/v1.5.2](https://github.com/nanomsg/nng/releases/tag/v1.5.2)
-* Plug-in Folder: /Binaries/ThirdParty
-  * /nng/Win64/Include/nng-1_5_2.dll
-* Plug-in Folder: /Source/ThirdParty
-  * /nng/Include/nng/nng.h (and subfiles or subfolders resp.)
-  * /nng/x64/nng-1_5_2.lib
-  * /nng/x64/nng-1_5_2.dll
+> The MIT License
+>
+> Copyright 2021 Staysail Systems, Inc. <info@staysail.tech>
+> Copyright 2018 Capitar IT Group BV <info@capitar.com>
+>
+> Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom
+the Software is furnished to do so, subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
 
 ## 2. nngpp
 
-This plug-in is using nngpp C++ wrapper software from [https://github.com/cwzx/nngpp](https://github.com/cwzx/nngpp).
+This plug-in makes use of *nngpp C++ wrapper* software (MIT License).
 
-### 2.1. License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* MIT License
+* Source: [https://github.com/cwzx/nngpp](https://github.com/cwzx/nngpp)
 
-### 2.2. Version
-
-* Version: nngpp Release v1.3.0 [https://github.com/cwzx/nngpp/releases/tag/nng-v1.3.0](https://github.com/cwzx/nngpp/releases/tag/nng-v1.3.0)
-* Plug-in Folder: /Source/ThirdParty
-  * /nngpp/Include/nngpp/nngpp.h (and subfiles or subfolders resp.)
+> The MIT License
+>
+> Copyright 2018 Chris Welshman
+>
+> Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom
+the Software is furnished to do so, subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
 
 ## A. References
 
