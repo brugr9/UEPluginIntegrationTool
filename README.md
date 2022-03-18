@@ -10,7 +10,7 @@ Plug-in Version: 1.0.0
 
 ## Description
 
-This plug-in enables asynchronous, broker-less messaging using NNG&trade; Next generation of nanomsg&trade; software from the Blueprint visual scripting system.
+This plug-in enables asynchronous, broker-less messaging using *NNG&trade; next generation of nanomsg&trade;* software from the Blueprint visual scripting system.
 
 The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with, e.g., an enterprise service bus or an event bus/broker resp. Another use case could be data streaming or instant messaging from a game or into a game.
 
@@ -22,9 +22,9 @@ Features:
 * Publish-Subscribe aka PUB/SUB Pattern
 * Publisher Actor-Component with Blueprint callable function node to publish messages with a specified topic;<br>event on message published
 * Subscriber Actor-Component with Blueprint callable function nodes to subscribe or unsubscribe a topic;<br>events on subscribed or on unsubscribed a topic and on received a message
-* PUB-/SUB-Socket Actors with Blueprint callable function nodes to
-  * Open or close the socket; events on openned or on closed
-  * Bind an endpoint or connect to an endpoint; events on bound or on connected
+* PUB-Socket and SUB-Socket Actors with Blueprint callable function nodes to
+  * Open or close the socket; events on openned or on closed and on errors
+  * Bind an endpoint or connect to an endpoint; events on bound or on connected and on errors
 * TCP and INPROC
 * Custom log category LogNextGenMsg
 
@@ -115,9 +115,9 @@ Screenshot of Module NextGenMsg C++ Classes and Class Diagram:
 
 ### 2.2. Actors
 
-PUB-/SUB-Socket Actors may be added to a map by drag’n’drop from 'Place Actors' panel. Please consider: There is no sprite shown in the viewport but the actor is listed in the world outliner.
+PUB-Socket and SUB-Socket Actors may be added to a map by drag'n'drop from 'Place Actors' panel. Please consider: There is no sprite shown in the viewport but the actor is listed in the world outliner.
 
-Screenshot of Module NextGenMsg Actors `NNG PUB-Socket` and `NNG SUB-Socket` listed in Unreal Editor, tab 'Place Actors', category 'All Classes':
+Screenshot of Actors `NNG PUB-Socket` and `NNG SUB-Socket` listed in Unreal Editor, tab 'Place Actors', category 'All Classes':
 
 ![Screenshot of Module NextGenMsg Actors](Docs/ScreenshotActors.jpg "Screenshot of Module NextGenMsg Actors")
 
