@@ -5,6 +5,7 @@ Author: [brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 
 ## Release v1.0.1
 
+* fix: nng close socket
 * fix: Typo in functions and events (IsOpen, OnOpen)
 * fix: Marketplace URL
 * fix: Fix up redirectors in content folder
