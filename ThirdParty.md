@@ -16,7 +16,7 @@ Plug-in Version: 1.0.0
 
 ## 1. nng
 
-This plug-in makes use of *NNG™ Next generation of nanomsg™* software (MIT License).
+This plug-in makes use of *NNG&trade; Next generation of nanomsg&trade;* software (MIT License).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -44,6 +44,8 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
+
+<div style='page-break-after: always'></div>
 
 ## 2. nngpp
 
@@ -77,5 +79,5 @@ IN THE SOFTWARE.
 
 ## A. References
 
-* Official NNG™ Next generation of nanomsg™ software Homepage: [https://nng.nanomsg.org](https://nng.nanomsg.org)
+* Official NNG&trade; Next generation of nanomsg&trade; software Homepage: [https://nng.nanomsg.org](https://nng.nanomsg.org)
 * Trademark Policy: [https://nanomsg.org/trademarks.html](https://nanomsg.org/trademarks.html)

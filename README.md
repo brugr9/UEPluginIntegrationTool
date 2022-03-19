@@ -2,7 +2,7 @@
 
 Adds Blueprint support for asynchronous messaging with NNG&trade;
 
-Plug-in Version: 1.0.0
+Plugin Version: 1.0.1
 <br>Author: [brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 <br>Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
 
@@ -23,7 +23,7 @@ Features:
 * Publisher Actor-Component with Blueprint callable function node to publish messages with a specified topic;<br>event on message published
 * Subscriber Actor-Component with Blueprint callable function nodes to subscribe or unsubscribe a topic;<br>events on subscribed or on unsubscribed a topic and on received a message
 * PUB-Socket and SUB-Socket Actors with Blueprint callable function nodes to
-  * Open or close the socket; events on opened or on closed and on errors
+  * Open or close the socket; events on open or on closed and on errors
   * Bind an endpoint or connect to an endpoint; events on bound or on connected and on errors
 * TCP and INPROC
 * Custom log category LogNextGenMsg
@@ -81,12 +81,12 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
 
 ## 1. Installation
 
-Startup the Unreal Editor, and access the Plugin Editor from the menu 'Edit > Plugins'. In the Plugin Editor, under category 'Messaging' find and enable the plug-in.
+Startup the Unreal Editor, and access the Plugin Editor from the menu 'Edit > Plugins'. In the Plugin Editor, under category 'Messaging' find and enable the plugin.
 
-![Screenshot of Plugin Editor with Plug-in Integration Tool](Docs/ScreenshotPlugin.jpg "Screenshot of Plugin Editor with Plug-in Integration Tool")
-<br>*Fig. 1: Screenshot of Plugin Editor with Plug-in 'Integration Tool'*
+![Screenshot of Plugin Editor with Plugin Integration Tool](Docs/ScreenshotPlugin.jpg "Screenshot of Plugin Editor with Plugin Integration Tool")
+<br>*Fig. 1: Screenshot of Plugin Editor with Plugin 'Integration Tool'*
 
-Finally restart the Unreal Editor. When the plug-in has been loaded successfully, the output log displays a message with the custom log category LogNextGenMsg informing about the library version used:
+Finally restart the Unreal Editor. When the plugin has been loaded successfully, the output log displays a message with the custom log category LogNextGenMsg informing about the library version used:
 
 ```log
 LogNextGenMsg: Using NNG version 1.5.2
@@ -119,19 +119,19 @@ A NNG socket can link an endpoint, more precisely it can bind a local address or
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
 * Functions:
-  * `Open`, `IsOpened`
+  * `Open`, `IsOpen`
   * `Bind`, `IsBound` (returns a `Boolean`)
   * `Connect`, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
   * `Close`
 * Events (Delegates):
-  * `OnOpened`, `OnOpenError` (returns an error message as `String`)
+  * `OnOpen`, `OnOpenError` (returns an error message as `String`)
   * `OnBound`, `OnBindError` (returns an error message as `String`)
   * `OnConnected`, `OnConnectError` (returns an error message as `String`)
   * `OnLinked`, `OnLinkError` (returns an error message as `String`)
   * `OnClosed`, `OnCloseError` (returns an error message as `String`)
 
-Upon successful `Open` or `Close`, the `OnOpened` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`.
+Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`.
 
 A `NngSocketActor` holds a `NngSocketObject` which acts as a third party library code wrapper where a low level `nng::socket` and its functions are accessed. `NngSocketActor` is an abstract class and is there to be inherited by the messaging pattern specific socket actors that follow now.
 
@@ -153,19 +153,19 @@ A NNG PUB-Socket Actor inherits from abstract class `NngSocketActor`:
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
 * Functions:
-  * `Open`, `IsOpened`
+  * `Open`, `IsOpen`
   * `Bind`, `IsBound` (returns a `Boolean`)
   * `Connect`, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
   * `Close`
 * Events (Delegates):
-  * `OnOpened`, `OnOpenError` (returns an error message as `String`)
+  * `OnOpen`, `OnOpenError` (returns an error message as `String`)
   * `OnBound`, `OnBindError` (returns an error message as `String`)
   * `OnConnected`, `OnConnectError` (returns an error message as `String`)
   * `OnLinked`, `OnLinkError` (returns an error message as `String`)
   * `OnClosed`, `OnCloseError` (returns an error message as `String`)
 
-Upon successful `Open` or `Close`, the `OnOpened` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`.
+Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`.
 
 <div style='page-break-after: always'></div>
 
@@ -186,19 +186,19 @@ A NNG SUB-Socket Actor inherits from abstract class `NngSocketActor`:
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
 * Functions:
-  * `Open`, `IsOpened`
+  * `Open`, `IsOpen`
   * `Bind`, `IsBound` (returns a `Boolean`)
   * `Connect`, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
   * `Close`
 * Events (Delegates):
-  * `OnOpened`, `OnOpenError` (returns an error message as `String`)
+  * `OnOpen`, `OnOpenError` (returns an error message as `String`)
   * `OnBound`, `OnBindError` (returns an error message as `String`)
   * `OnConnected`, `OnConnectError` (returns an error message as `String`)
   * `OnLinked`, `OnLinkError` (returns an error message as `String`)
   * `OnClosed`, `OnCloseError` (returns an error message as `String`)
 
-Upon successful `Open` or `Close`, the `OnOpened` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`. In addition a NNG SUB-Socket Actor has a Blueprint-callable function `Receive` to trigger a message pickup.
+Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`. In addition a NNG SUB-Socket Actor has a Blueprint-callable function `Receive` to trigger a message pickup.
 
 <div style='page-break-after: always'></div>
 
@@ -258,17 +258,17 @@ A NNG Subscriber Actor-Component has:
 
 ## 3. Demo
 
-The plug-in folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with a map Map_PubSub_Demo.
+The plugin folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with a map Map_PubSub_Demo.
 
-![Screenshot of Plug-in Content](Docs/ScreenshotPluginContent.jpg "Screenshot of Plug-in Content")
+![Screenshot of Plugin Content](Docs/ScreenshotPluginContent.jpg "Screenshot of Plugin Content")
 <br>*Fig. 3.1: Screenshot of Content Browser with 'Integration Tool' Content*
 
 The demo implements a PubSub-scheme as follows:
 
-* Two Publisher Actor-Components publish via a PUB-Socket Actor instance
-* The PUB-Socket Actor instance binds to tcp://127.0.0.1:5555
-* A SUB-Socket Actor instance connects tcp://127.0.0.1:5555
+* A PUB-Socket Actor instance binds address `tcp://127.0.0.1:5555`
+* A SUB-Socket Actor instance connects address `tcp://127.0.0.1:5555`
 * Two Subscriber Actor-Components subscribe via the SUB-Socket Actor instance
+* Two Publisher Actor-Components publish via the PUB-Socket Actor instance
 
 ![Demo PubSub-Scheme](Docs/Demo-PubSub.jpg "Demo PubSub-Scheme")
 <br>*Fig. 3.2: Demo PubSub-Scheme*

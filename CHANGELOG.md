@@ -3,6 +3,14 @@
 Author: [brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 <br>Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
 
+## Release v1.0.1
+
+* fix: Typo in functions and events (IsOpen, OnOpen)
+* fix: Marketplace URL
+* fix: Fix up redirectors in content folder
+* fix: Third party code annotation
+* doc: Update README.md
+
 ## Release v1.0.0
 
 * feat: Module NextGenMsgEditor
