@@ -10,7 +10,6 @@ Plug-in Version: 1.0.0
 
 * [1. nng](#1-nng)
 * [2. nngpp](#2-nngpp)
-* [A. References](#a-references)
 
 <!-- End Document Outline -->
 
@@ -25,6 +24,7 @@ This plug-in makes use of *NNG&trade; Next generation of nanomsg&trade;* softwar
 > The MIT License
 >
 > Copyright 2021 Staysail Systems, Inc. <info@staysail.tech>
+>
 > Copyright 2018 Capitar IT Group BV <info@capitar.com>
 >
 > Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -76,8 +76,3 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
-
-## A. References
-
-* Official NNG&trade; Next generation of nanomsg&trade; software Homepage: [https://nng.nanomsg.org](https://nng.nanomsg.org)
-* Trademark Policy: [https://nanomsg.org/trademarks.html](https://nanomsg.org/trademarks.html)

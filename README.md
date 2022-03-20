@@ -1,4 +1,4 @@
-# Unreal Engine Plugin: Integration Tool &ndash; README
+# Unreal&reg; Engine Plugin: Integration Tool &ndash; README
 
 Adds Blueprint support for asynchronous messaging with NNG&trade;
 
@@ -68,25 +68,27 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
 * [1. Installation](#1-installation)
 * [2. Usage](#2-usage)
   * [2.1. Concept](#21-concept)
-    * [2.1.1. Abstract Socket Actor](#221-abstract-socket-actor)
+    <!-- * [2.1.1. Abstract Socket Actor](#221-abstract-socket-actor) -->
   * [2.2. Actors](#22-actors)
-    * [2.2.1. PUB-Socket Actor](#222-pub-socket-actor)
-    * [2.2.2. SUB-Socket Actor](#223-sub-socket-actor)
+    * [2.2.1. PUB-Socket](#222-pub-socket)
+    * [2.2.2. SUB-Socket](#223-sub-socket)
   * [2.3. Actor-Components](#23-actor-components)
-    * [2.3.1. Publisher Actor-Component](#231-publisher-actor-component)
-    * [2.3.2. Subscriber Actor-Component](#232-subscriber-actor-component)
+    * [2.3.1. Publisher Actor-Component](#231-publisher)
+    * [2.3.2. Subscriber Actor-Component](#232-subscriber)
 * [3. Demo](#3-demo)
+* [A. Attribution](#a-attribution)
+* [B. References](#b-references)
 
 <!-- End Document Outline -->
 
 ## 1. Installation
 
-Startup the Unreal Editor, and access the Plugin Editor from the menu 'Edit > Plugins'. In the Plugin Editor, under category 'Messaging' find and enable the plugin.
+Startup the Unreal&reg; editor, and from the menu 'Edit > Plugins' access the 'Plugin Editor'. In the 'Plugin Editor', under category 'Messaging' find and enable the plugin.
 
 ![Screenshot of Plugin Editor with Plugin Integration Tool](Docs/ScreenshotPlugin.jpg "Screenshot of Plugin Editor with Plugin Integration Tool")
 <br>*Fig. 1: Screenshot of Plugin Editor with Plugin 'Integration Tool'*
 
-Finally restart the Unreal Editor. When the plugin has been loaded successfully, the output log displays a message with the custom log category LogNextGenMsg informing about the library version used:
+Finally restart the editor. When the plugin has been loaded successfully, the output log displays a message with the custom log category LogNextGenMsg informing about the library version used:
 
 ```log
 LogNextGenMsg: Using NNG version 1.5.2
@@ -98,9 +100,7 @@ LogNextGenMsg: Using NNG version 1.5.2
 
 ### 2.1. Concept
 
-A PUB-socket can be used by multiple publishers to send messages to an endpoint and a SUB-socket can be used by multiple subscribers to receive messages from an endpoint.
-
-Publisher and subscriber actor components are responsible for publishing messages and subscribing to topics and receiving messages. These components contain as a variable a topic to publish or subscribe to. As another variable they contain a reference to a PUB- or SUB-socket instance they work with.
+<!--
 
 ![Screenshot of Module NextGenMsg C++ Classes](Docs/ScreenshotPluginCppClasses.jpg "Screenshot of Module NextGenMsg C++ Classes")
 <br>*Fig. 2.1: Screenshot of Module NextGenMsg C++ Classes*
@@ -108,13 +108,22 @@ Publisher and subscriber actor components are responsible for publishing message
 ![Class Diagram Module NextGenMsg](Docs/ModuleClassDiagram.jpg "Class Diagram Module NextGenMsg")
 <br>*Fig. 2.2: Class Diagram Module NextGenMsg*
 
+-->
+
+Publisher and subscriber as actor components are responsible for publishing messages and subscribing to topics and receiving messages. These components contain as a variable a topic to publish or subscribe to. As another variable they contain a reference to a PUB- or SUB-socket instance they work with.
+
+* One or multiple Publisher Actor-Components can access the same PUB-Socket Actor to send messages to the same endpoint (`Publisher : PUB-Socket = n : 1`).
+* One or multiple Subscriber Actor-Components can access the same SUB-Socket Actor to subscribe to a topic and to receive messages from the same endpoint (`Subscriber : SUB-Socket = n : 1`).
+
+<!--
+
 #### 2.1.1. Abstract Socket Actor
 
-A NNG socket can link an endpoint, more precisely it can bind a local address or connect to a remote address. Therefore, `NngSocketActor` has:
+A NNG&trade;socket can link an endpoint, more precisely it can bind a local address or connect to a remote address. Therefore, the plugin's C++ class `NngSocketActor` has:
 
 <div style='page-break-after: always'></div>
 
-* Variables, Endpoint:
+* Variables, Group 'Endpoint':
   * Transport Type (`Select`): `tcp` (default), `inproc`
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
@@ -133,22 +142,27 @@ A NNG socket can link an endpoint, more precisely it can bind a local address or
 
 Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`.
 
-A `NngSocketActor` holds a `NngSocketObject` which acts as a third party library code wrapper where a low level `nng::socket` and its functions are accessed. `NngSocketActor` is an abstract class and is there to be inherited by the messaging pattern specific socket actors that follow now.
+The plugin's C++ class `NngSocketActor` holds a C++ class `NngSocketObject` which acts as a third party library code wrapper where a low level NNG&trade; `nng::socket` and its functions are accessed. The C++ class `NngSocketActor` is an abstract class and is there to be inherited by the messaging pattern specific socket actors:
+
+* PUB-Socket Actor: C++ class `NngPubSocketActor` inherits from abstract C++ class `NngSocketActor`
+* SUB-Socket Actor: C++ class `NngSubSocketActor` inherits from abstract C++ class `NngSocketActor`
+
+-->
 
 ### 2.2. Actors
 
-`NNG PUB-Socket` and `NNG SUB-Socket` Actors may be added to a map by drag'n'drop from 'Place Actors' panel, category 'All Classes'. Please consider that there is no sprite shown in the viewport, but the actors are listed in the world outliner.
+The plugin provides with PUB-Sockets and SUB-Sockets which are Actors and may be found in the 'Place Actors' panel, category 'All Classes' and can be added to a map by drag'n'drop. The added actors then are listed in the world outliner. Please consider that in the viewport no sprite shown for these sockets.
 
-![Screenshot of Module NextGenMsg Actors](Docs/ScreenshotActors.jpg "Screenshot of Module NextGenMsg Actors")
-<br>*Fig. 2.3: Screenshot of NNG Socket Actors listed in Editor Tab 'Place Actors'*
+![Screenshot of Socket Actors listed in Editor Tab 'Place Actors'](Docs/ScreenshotActors.jpg "Screenshot of Socket Actors listed in Editor Tab 'Place Actors'")
+<br>*Fig. 2.3: Screenshot of Socket Actors listed in Editor Tab 'Place Actors'*
 
 <div style='page-break-after: always'></div>
 
-#### 2.2.1. PUB-Socket Actor
+#### 2.2.1. PUB-Socket
 
-A NNG PUB-Socket Actor inherits from abstract class `NngSocketActor`:
+A PUB-Socket Actor has:
 
-* Variables, Endpoint:
+* Variables, Group 'Endpoint':
   * Transport Type (`Select`): `tcp` (default), `inproc`
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
@@ -169,19 +183,19 @@ Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered
 
 <div style='page-break-after: always'></div>
 
-![Screenshot of NNG PUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotPubSocketActor.jpg "Screenshot of NNG PUB-Socket Actor instance 'Details' panel with variables from Endpoint")
-<br>*Fig. 2.4: Screenshot of NNG PUB-Socket Actor instance 'Details' panel with variables from Endpoint*
+![Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotPubSocketActor.jpg "Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint")
+<br>*Fig. 2.4: Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint*
 
-![Screenshot of NNG PUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotPubSocketActorFunctionAndEventNodes.jpg "Screenshot of NNG PUB-Socket Actor function and event nodes in Level Blueprint")
-<br>*Fig. 2.5: Screenshot of NNG PUB-Socket Actor function and event nodes in a Level Blueprint*
+![Screenshot of PUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotPubSocketActorFunctionAndEventNodes.jpg "Screenshot of PUB-Socket Actor function and event nodes in Level Blueprint")
+<br>*Fig. 2.5: Screenshot of PUB-Socket Actor function and event nodes in a Level Blueprint*
 
 <div style='page-break-after: always'></div>
 
 #### 2.2.2. SUB-Socket Actor
 
-A NNG SUB-Socket Actor inherits from abstract class `NngSocketActor`:
+A SUB-Socket Actor has:
 
-* Variables, Endpoint:
+* Variables, Group 'Endpoint':
   * Transport Type (`Select`): `tcp` (default), `inproc`
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
@@ -198,50 +212,50 @@ A NNG SUB-Socket Actor inherits from abstract class `NngSocketActor`:
   * `OnLinked`, `OnLinkError` (returns an error message as `String`)
   * `OnClosed`, `OnCloseError` (returns an error message as `String`)
 
-Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`. In addition a NNG SUB-Socket Actor has a Blueprint-callable function `Receive` to trigger a message pickup.
+Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`. In addition a SUB-Socket Actor has a Blueprint-callable function `Receive` to trigger a message pickup.
 
 <div style='page-break-after: always'></div>
 
-![Screenshot of NNG SUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotSubSocketActor.jpg "Screenshot of NNG SUB-Socket Actor instance 'Details' panel with variables from Endpoint")
-<br>*Fig. 2.6: Screenshot of NNG SUB-Socket Actor instance 'Details' panel with variables from Endpoint*
+![Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotSubSocketActor.jpg "Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint")
+<br>*Fig. 2.6: Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint*
 
-![Screenshot of NNG SUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotSubSocketActorFunctionAndEventNodes.jpg "Screenshot of NNG SUB-Socket Actor function and event nodes in Level Blueprint")
-<br>*Fig. 2.7: Screenshot of NNG SUB-Socket Actor function and event nodes in a Level Blueprint*
+![Screenshot of SUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotSubSocketActorFunctionAndEventNodes.jpg "Screenshot of SUB-Socket Actor function and event nodes in Level Blueprint")
+<br>*Fig. 2.7: Screenshot of SUB-Socket Actor function and event nodes in a Level Blueprint*
 
 <div style='page-break-after: always'></div>
 
 ### 2.3. Actor-Components
 
-A NNG Publisher Actor-Component or a NNG Subscriber Actor-Component may be added to a Blueprints 'Components' tab by pressing the 'Add Components' button. The components are listed with category 'Messaging'.
+A Publisher Actor-Component or a Subscriber Actor-Component may be added to a Blueprints 'Components' tab by pressing the 'Add Components' button. The components are listed with category 'Messaging'.
 
-![Screenshot of NNG Actor-Components](Docs/ScreenshotActorComponents.jpg "Screenshot of NNG Actor-Components")
-<br>*Fig. 2.8: Screenshot of NNG Actor-Components listed in Unreal Editor, tab 'Components', category 'Messaging'*
+![Screenshot of Actor-Components](Docs/ScreenshotActorComponents.jpg "Screenshot of Actor-Components")
+<br>*Fig. 2.8: Screenshot of Actor-Components listed in tab 'Components', category 'Messaging'*
 
 #### 2.3.1. Publisher Actor-Component
 
-A NNG Publisher Actor-Component has:
+A Publisher Actor-Component has:
 
 * Variables:
   * Topic: The topic `String` with which is published
-  * PUB-Socket: An `NngPubSocketActor` instance which is used for publishing messages
+  * PUB-Socket: A PUB-Socket Actor instance which is used for publishing messages
 * Functions:
   * `Publish` with in-parameter 'Message' as `String`
 * Events (Delegates):
   * `OnPublished`
 
-![Screenshot of Actor-Component NNG Publisher](Docs/ScreenshotPublisher.jpg "Screenshot of Actor-Component NNG Publisher")
-<br>*Fig. 2.9: Screenshot of Event Graph with NNG Publisher Actor-Component function and event nodes*
+![Screenshot of Actor-Component Publisher](Docs/ScreenshotPublisher.jpg "Screenshot of Actor-Component Publisher")
+<br>*Fig. 2.9: Screenshot of an Event Graph with Publisher Actor-Component function and event nodes*
 
 <div style='page-break-after: always'></div>
 
 #### 2.3.2. Subscriber Actor-Component
 
-A NNG Subscriber Actor-Component has:
+A Subscriber Actor-Component has:
 
 * Variables:
   * Topic: The topic `String` to subscribe to
   * Starts With (Check Box): If checked test whether received topic starts with the given topic &ndash; exact match otherwise (case sensitive string comparison in both cases)
-  * SUB-Socket: An `NngSubSocketActor` instance which is used for receiving messages
+  * SUB-Socket: A SUB-Socket Actor instance which is used for receiving messages
 * Functions:
   * `Subscribe`
   * `IsSubscribed` (returns a `Boolean`)
@@ -251,8 +265,8 @@ A NNG Subscriber Actor-Component has:
   * `OnUnsubscribed`
   * `OnReceived` (returns the received 'Message' as `String`)
 
-![Screenshot of Actor-Component NNG Subscriber](Docs/ScreenshotSubscriber.jpg "Screenshot of Actor-Component NNG Subscriber")
-<br>*Fig. 2.10: Screenshot of Event Graph with NNG Subscriber Actor-Component function and event nodes*
+![Screenshot of Actor-Component Subscriber](Docs/ScreenshotSubscriber.jpg "Screenshot of Actor-Component Subscriber")
+<br>*Fig. 2.10: Screenshot of an Event Graph with Subscriber Actor-Component function and event nodes*
 
 <div style='page-break-after: always'></div>
 
@@ -275,7 +289,7 @@ The demo implements a PubSub-scheme as follows:
 
 <div style='page-break-after: always'></div>
 
-The cyan and the yellow cube each use a NNG Publisher Actor-Component and loop publishing a message 'Hello from Cyan #1' with topic 'Cyan' or 'Hello from Yellow #1' with topic 'Yellow' respectively.
+The cyan and the yellow cube each use a Publisher Actor-Component and loop publishing a message 'Hello from Cyan #1' with topic 'Cyan' or 'Hello from Yellow #1' with topic 'Yellow' respectively.
 
 ![Screenshot of Blueprint BP_CubeCyan Event Graph](Docs/ScreenshotDemoActor_BP_CubeCyan.jpg "Screenshot of Blueprint BP_CubeCyan Event Graph")
 <br>*Fig. 3.3: Screenshot of Blueprint BP_CubeCyan Event Graph*
@@ -285,7 +299,7 @@ The cyan and the yellow cube each use a NNG Publisher Actor-Component and loop p
 
 <div style='page-break-after: always'></div>
 
-A third, green cube uses two NNG Subscriber Actor-Components to subscribe to topics 'C' and 'Y'&ndash;both check-boxes 'Starts With' are checked&ndash;and appends the received messages to its `TextRender` Scene-Component and prints the same to the Output Log.
+A third, green cube uses two Subscriber Actor-Components to subscribe to topics 'C' and 'Y'&ndash;both check-boxes 'Starts With' are checked&ndash;and appends the received messages to its `TextRender` Scene-Component and prints the same to the Output Log.
 
 ![Screenshot of Blueprint BP_CubeGreen Event Graph](Docs/ScreenshotDemoActor_BP_CubeGreen.jpg "Screenshot of Blueprint BP_CubeGreen Event Graph")
 <br>*Fig. 3.5: Screenshot of Blueprint BP_CubeGreen Event Graph*
@@ -307,28 +321,30 @@ With `Event EndPlay` the Receive-Timer is cleard and invalidated, and the SUB-So
 
 <div style='page-break-after: always'></div>
 
-The demo map also has instances each of BP_CubeCyan, BP_CubeYellow, and BP_CubeGreen. In these cube instances, the NNG Publisher and NNG Subscriber Actor-Components were each assigned the `NngPubSocketActor` instance or the `NngSubSocketActor` instance, respectively.
+The demo map also has instances each of BP_CubeCyan, BP_CubeYellow, and BP_CubeGreen. In these cube instances, the Publisher and Subscriber Actor-Components were each assigned the  PUB-Socket Actor instance or the  SUB-Socket Actor instance, respectively.
 
 ![Screenshot of Blueprint BP_CubeCyan instance 'Details' panel](Docs/ScreenshotDemoActor_BP_CubeCyan_DetailsPanel.jpg "Screenshot of Blueprint BP_CubeCyan instance 'Details' panel")
-<br>*Fig. 3.8: Screenshot of BP_CubeCyan instances 'Details' panel, NNG Publisher Actor-Component with assigned reference to a `NngPubSocketActor` instance*
+<br>*Fig. 3.8: Screenshot of BP_CubeCyan instances 'Details' panel, Publisher Actor-Component with assigned reference to a  PUB-Socket Actor instance*
 
 ![Screenshot of Blueprint BP_CubeYellow instance 'Details' panel](Docs/ScreenshotDemoActor_BP_CubeYellow_DetailsPanel.jpg "Screenshot of Blueprint BP_CubeYellow instance 'Details' panel")
-<br>*Fig. 3.9: Screenshot of BP_CubeYellow instances 'Details' panel, NNG Publisher Actor-Component with assigned reference to a `NngPubSocketActor` instance*
+<br>*Fig. 3.9: Screenshot of BP_CubeYellow instances 'Details' panel, Publisher Actor-Component with assigned reference to a  PUB-Socket Actor instance*
 
 <div style='page-break-after: always'></div>
 
 ![Screenshot of Blueprint BP_CubeGreen instance 'Details' panel 1](Docs/ScreenshotDemoActor_BP_CubeGreen_DetailsPanel_1.jpg "Screenshot of Blueprint BP_CubeGreen instance 'Details' panel 1")
-<br>*Fig. 3.10: Screenshot of BP_CubeGreen instance 'Details' panel, NNG Subscriber Actor-Component 'Subscriber_C' with assigned reference to a `NngSubSocketActor` instance*
+<br>*Fig. 3.10: Screenshot of BP_CubeGreen instance 'Details' panel, Subscriber Actor-Component 'Subscriber_C' with assigned reference to a  SUB-Socket Actor instance*
 
 ![Screenshot of Blueprint BP_CubeGreen instance 'Details' panel 2](Docs/ScreenshotDemoActor_BP_CubeGreen_DetailsPanel_2.jpg "Screenshot of Blueprint BP_CubeGreen instance 'Details' panel 2")
-<br>*Fig. 3.11: Screenshot of BP_CubeGreen instance 'Details' panel, NNG Subscriber Actor-Component 'Subscriber_Y' with assigned reference to a `NngSubSocketActor` instance*
+<br>*Fig. 3.11: Screenshot of BP_CubeGreen instance 'Details' panel, Subscriber Actor-Component 'Subscriber_Y' with assigned reference to a  SUB-Socket Actor instance*
 
 <div style='page-break-after: always'></div>
 
-When the Map_PubSub_Demo level is open, click the Play button in the level editor to start Play-in-Editor PIE. The module writes to the output log with the custom log category LogNextGenMsg. The TCP communication can also be tracked in Wireshark.
+When the Map_PubSub_Demo level is open, click the Play button in the level editor to start Play-in-Editor PIE. The plugin writes to the output log with the custom log category LogNextGenMsg. A TCP communication can also be tracked in Wireshark.
 
 ![Animation Screenshot of Demo Map PIE](Docs/DemoMapPIE.gif "Animation Screenshot of Demo Map PIE")
 <br>*Fig. 3.12: Animation Screenshot of Demo Map PIE*
+
+<!--
 
 ```log
 [...]
@@ -379,6 +395,18 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 ```
 *Listing 3.2: Output Log of Map_PubSub_Demo stopping PIE, with custom log category LogNextGenMsg*
 
+-->
+
 ![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-1.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
 ![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-2.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
 <br>*Fig. 3.13: Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark*
+
+## A. Attribution
+
+* The word mark *Unreal&reg;* and its logo are Epic Games, Inc. trademarks or registered trademarks in the US and elsewhere (cp. Branding Guidelines and Trademark Usage, URL: [https://www.unrealengine.com/en-US/branding](https://www.unrealengine.com/en-US/branding))
+* The word mark *nanomsg&trade;* and *NNG&trade;* and its logos are trademarks of Garrett D'Amore, used with permission (cp. Trademark Policy, URL: [https://nanomsg.org/trademarks.html](https://nanomsg.org/trademarks.html))
+
+## B. References
+
+* *Unreal&reg; Engine* software Homepage: [https://www.unrealengine.com](https://www.unrealengine.com)
+* *NNG&trade; Next generation of nanomsg&trade;* software Homepage: [https://nng.nanomsg.org](https://nng.nanomsg.org)
