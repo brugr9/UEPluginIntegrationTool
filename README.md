@@ -70,11 +70,11 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
   * [2.1. Concept](#21-concept)
     <!-- * [2.1.1. Abstract Socket Actor](#221-abstract-socket-actor) -->
   * [2.2. Actors](#22-actors)
-    * [2.2.1. PUB-Socket](#222-pub-socket)
-    * [2.2.2. SUB-Socket](#223-sub-socket)
+    * [2.2.1. PUB-Socket Actor](#221-pub-socket-actor)
+    * [2.2.2. SUB-Socket Actor](#222-sub-socket-actor)
   * [2.3. Actor-Components](#23-actor-components)
-    * [2.3.1. Publisher Actor-Component](#231-publisher)
-    * [2.3.2. Subscriber Actor-Component](#232-subscriber)
+    * [2.3.1. Publisher Actor-Component](#231-publisher-actor-component)
+    * [2.3.2. Subscriber Actor-Component](#232-subscriber-actor-component)
 * [3. Demo](#3-demo)
 * [A. Attribution](#a-attribution)
 * [B. References](#b-references)
@@ -158,7 +158,7 @@ The plugin provides with PUB-Sockets and SUB-Sockets which are Actors and may be
 
 <div style='page-break-after: always'></div>
 
-#### 2.2.1. PUB-Socket
+#### 2.2.1. PUB-Socket Actor
 
 A PUB-Socket Actor has:
 
