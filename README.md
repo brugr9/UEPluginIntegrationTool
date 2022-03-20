@@ -401,6 +401,8 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 ![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-2.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
 <br>*Fig. 3.13: Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark*
 
+<div style='page-break-after: always'></div>
+
 ## A. Attribution
 
 * The word mark *Unreal&reg;* and its logo are Epic Games, Inc. trademarks or registered trademarks in the US and elsewhere (cp. Branding Guidelines and Trademark Usage, URL: [https://www.unrealengine.com/en-US/branding](https://www.unrealengine.com/en-US/branding))
