@@ -18,14 +18,14 @@ The delivered assets provide transporting messages over a network and can be use
 
 Features:
 
-* Demo Map and Blueprints
 * Publish-Subscribe aka PUB/SUB Pattern
-* Publisher Actor-Component with Blueprint callable function node to publish messages with a specified topic;<br>event on message published
-* Subscriber Actor-Component with Blueprint callable function nodes to subscribe or unsubscribe a topic;<br>events on subscribed or on unsubscribed a topic and on received a message
-* PUB-Socket and SUB-Socket Actors with Blueprint callable function nodes to
+* TCP and INPROC
+* PUB-Socket Actor and SUB-Socket Actor with Blueprint callable function nodes to
   * Open or close the socket; events on open or on closed and on errors
   * Bind an endpoint or connect to an endpoint; events on bound or on connected and on errors
-* TCP and INPROC
+* Publisher Actor-Component with Blueprint callable function node to publish messages with a specified topic;<br>event on message published
+* Subscriber Actor-Component with Blueprint callable function nodes to subscribe or unsubscribe a topic;<br>event on subscribed or on unsubscribed a topic and on received a message
+* Demo Map and Blueprints
 <!-- * Custom log category LogNextGenMsg -->
 
 Code Modules:
