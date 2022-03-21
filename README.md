@@ -26,7 +26,7 @@ Features:
   * Open or close the socket; events on open or on closed and on errors
   * Bind an endpoint or connect to an endpoint; events on bound or on connected and on errors
 * TCP and INPROC
-* Custom log category LogNextGenMsg
+<!-- * Custom log category LogNextGenMsg -->
 
 Code Modules:
 
@@ -86,7 +86,7 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
 Startup the Unreal&reg; editor, and from the menu 'Edit > Plugins' access the 'Plugin Editor'. In the 'Plugin Editor', under category 'Messaging' find and enable the plugin.
 
 ![Screenshot of Plugin Editor with Plugin Integration Tool](Docs/ScreenshotPlugin.jpg "Screenshot of Plugin Editor with Plugin Integration Tool")
-<br>*Fig. 1: Screenshot of Plugin Editor with Plugin 'Integration Tool'*
+<br>*Fig. 1.: Screenshot of Plugin Editor with Plugin 'Integration Tool'*
 
 Finally restart the editor. When the plugin has been loaded successfully, the output log displays a message with the custom log category LogNextGenMsg informing about the library version used:
 
@@ -103,10 +103,10 @@ LogNextGenMsg: Using NNG version 1.5.2
 <!--
 
 ![Screenshot of Module NextGenMsg C++ Classes](Docs/ScreenshotPluginCppClasses.jpg "Screenshot of Module NextGenMsg C++ Classes")
-<br>*Fig. 2.1: Screenshot of Module NextGenMsg C++ Classes*
+<br>*Fig. 2.1.: Screenshot of Module NextGenMsg C++ Classes*
 
 ![Class Diagram Module NextGenMsg](Docs/ModuleClassDiagram.jpg "Class Diagram Module NextGenMsg")
-<br>*Fig. 2.2: Class Diagram Module NextGenMsg*
+<br>*Fig. 2.2.: Class Diagram Module NextGenMsg*
 
 -->
 
@@ -154,7 +154,7 @@ The plugin's C++ class `NngSocketActor` holds a C++ class `NngSocketObject` whic
 The plugin provides with PUB-Sockets and SUB-Sockets which are Actors and may be found in the 'Place Actors' panel, category 'All Classes' and can be added to a map by drag'n'drop. The added actors then are listed in the world outliner. Please consider that in the viewport no sprite shown for these sockets.
 
 ![Screenshot of Socket Actors listed in Editor Tab 'Place Actors'](Docs/ScreenshotActors.jpg "Screenshot of Socket Actors listed in Editor Tab 'Place Actors'")
-<br>*Fig. 2.3: Screenshot of Socket Actors listed in Editor Tab 'Place Actors'*
+<br>*Fig. 2.3.: Screenshot of Socket Actors listed in Editor Tab 'Place Actors'*
 
 <div style='page-break-after: always'></div>
 
@@ -184,10 +184,10 @@ Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered
 <div style='page-break-after: always'></div>
 
 ![Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotPubSocketActor.jpg "Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint")
-<br>*Fig. 2.4: Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint*
+<br>*Fig. 2.4.: Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint*
 
 ![Screenshot of PUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotPubSocketActorFunctionAndEventNodes.jpg "Screenshot of PUB-Socket Actor function and event nodes in Level Blueprint")
-<br>*Fig. 2.5: Screenshot of PUB-Socket Actor function and event nodes in a Level Blueprint*
+<br>*Fig. 2.5.: Screenshot of PUB-Socket Actor function and event nodes in a Level Blueprint*
 
 <div style='page-break-after: always'></div>
 
@@ -217,10 +217,10 @@ Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered
 <div style='page-break-after: always'></div>
 
 ![Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotSubSocketActor.jpg "Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint")
-<br>*Fig. 2.6: Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint*
+<br>*Fig. 2.6.: Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint*
 
 ![Screenshot of SUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotSubSocketActorFunctionAndEventNodes.jpg "Screenshot of SUB-Socket Actor function and event nodes in Level Blueprint")
-<br>*Fig. 2.7: Screenshot of SUB-Socket Actor function and event nodes in a Level Blueprint*
+<br>*Fig. 2.7.: Screenshot of SUB-Socket Actor function and event nodes in a Level Blueprint*
 
 <div style='page-break-after: always'></div>
 
@@ -229,7 +229,7 @@ Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered
 A Publisher Actor-Component or a Subscriber Actor-Component may be added to a Blueprints 'Components' tab by pressing the 'Add Components' button. The components are listed with category 'Messaging'.
 
 ![Screenshot of Actor-Components](Docs/ScreenshotActorComponents.jpg "Screenshot of Actor-Components")
-<br>*Fig. 2.8: Screenshot of Actor-Components listed in tab 'Components', category 'Messaging'*
+<br>*Fig. 2.8.: Screenshot of Actor-Components listed in tab 'Components', category 'Messaging'*
 
 #### 2.3.1. Publisher Actor-Component
 
@@ -244,7 +244,7 @@ A Publisher Actor-Component has:
   * `OnPublished`
 
 ![Screenshot of Actor-Component Publisher](Docs/ScreenshotPublisher.jpg "Screenshot of Actor-Component Publisher")
-<br>*Fig. 2.9: Screenshot of an Event Graph with Publisher Actor-Component function and event nodes*
+<br>*Fig. 2.9.: Screenshot of an Event Graph with Publisher Actor-Component function and event nodes*
 
 <div style='page-break-after: always'></div>
 
@@ -266,7 +266,7 @@ A Subscriber Actor-Component has:
   * `OnReceived` (returns the received 'Message' as `String`)
 
 ![Screenshot of Actor-Component Subscriber](Docs/ScreenshotSubscriber.jpg "Screenshot of Actor-Component Subscriber")
-<br>*Fig. 2.10: Screenshot of an Event Graph with Subscriber Actor-Component function and event nodes*
+<br>*Fig. 2.10.: Screenshot of an Event Graph with Subscriber Actor-Component function and event nodes*
 
 <div style='page-break-after: always'></div>
 
@@ -275,7 +275,7 @@ A Subscriber Actor-Component has:
 The plugin folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with a map Map_PubSub_Demo.
 
 ![Screenshot of Plugin Content](Docs/ScreenshotPluginContent.jpg "Screenshot of Plugin Content")
-<br>*Fig. 3.1: Screenshot of Content Browser with 'Integration Tool' Content*
+<br>*Fig. 3.1.: Screenshot of Content Browser with 'Integration Tool' Content*
 
 The demo implements a PubSub-scheme as follows:
 
@@ -285,29 +285,29 @@ The demo implements a PubSub-scheme as follows:
 * Two Publisher Actor-Components publish via the PUB-Socket Actor instance
 
 ![Demo PubSub-Scheme](Docs/Demo-PubSub.jpg "Demo PubSub-Scheme")
-<br>*Fig. 3.2: Demo PubSub-Scheme*
+<br>*Fig. 3.2.: Demo PubSub-Scheme*
 
 <div style='page-break-after: always'></div>
 
 The cyan and the yellow cube each use a Publisher Actor-Component and loop publishing a message 'Hello from Cyan #1' with topic 'Cyan' or 'Hello from Yellow #1' with topic 'Yellow' respectively.
 
 ![Screenshot of Blueprint BP_CubeCyan Event Graph](Docs/ScreenshotDemoActor_BP_CubeCyan.jpg "Screenshot of Blueprint BP_CubeCyan Event Graph")
-<br>*Fig. 3.3: Screenshot of Blueprint BP_CubeCyan Event Graph*
+<br>*Fig. 3.3.: Screenshot of Blueprint BP_CubeCyan Event Graph*
 
 ![Screenshot of Blueprint BP_CubeYellow Event Graph](Docs/ScreenshotDemoActor_BP_CubeYellow.jpg "Screenshot of Blueprint BP_CubeYellow Event Graph")
-<br>*Fig. 3.4: Screenshot of Blueprint BP_CubeYellow Event Graph*
+<br>*Fig. 3.4.: Screenshot of Blueprint BP_CubeYellow Event Graph*
 
 <div style='page-break-after: always'></div>
 
 A third, green cube uses two Subscriber Actor-Components to subscribe to topics 'C' and 'Y'&ndash;both check-boxes 'Starts With' are checked&ndash;and appends the received messages to its `TextRender` Scene-Component and prints the same to the Output Log.
 
 ![Screenshot of Blueprint BP_CubeGreen Event Graph](Docs/ScreenshotDemoActor_BP_CubeGreen.jpg "Screenshot of Blueprint BP_CubeGreen Event Graph")
-<br>*Fig. 3.5: Screenshot of Blueprint BP_CubeGreen Event Graph*
+<br>*Fig. 3.5.: Screenshot of Blueprint BP_CubeGreen Event Graph*
 
 The Map_PubSub_Demo has an instance each of PUB-Socket Actor and SUB-Socket Actor. The sockets link an endpoint with TCP on host 127.0.0.1 and port 5555 (default values).
 
 ![Screenshot of Demo Map](Docs/ScreenshotDemoMap.jpg "Screenshot of Demo Map")
-<br>*Fig. 3.6: Screenshot of Map_PubSub_Demo*
+<br>*Fig. 3.6.: Screenshot of Map_PubSub_Demo*
 
 <div style='page-break-after: always'></div>
 
@@ -317,32 +317,32 @@ With event `OnLinked (PUB-Socket)` the SUB-Socket Actor's function `Open` is cal
 With `Event EndPlay` the Receive-Timer is cleard and invalidated, and the SUB-Socket Actor's as well as the PUB-Socket Actor's function `Close` is called.
 
 ![Screenshot of Demo Map Level-Blueprint](Docs/ScreenshotDemoLevelBlueprint.jpg "Screenshot of Demo Map Level-Blueprint")
-<br>*Fig. 3.7: Screenshot of Map_PubSub_Demo Level-Blueprint*
+<br>*Fig. 3.7.: Screenshot of Map_PubSub_Demo Level-Blueprint*
 
 <div style='page-break-after: always'></div>
 
 The demo map also has instances each of BP_CubeCyan, BP_CubeYellow, and BP_CubeGreen. In these cube instances, the Publisher and Subscriber Actor-Components were each assigned the  PUB-Socket Actor instance or the  SUB-Socket Actor instance, respectively.
 
 ![Screenshot of Blueprint BP_CubeCyan instance 'Details' panel](Docs/ScreenshotDemoActor_BP_CubeCyan_DetailsPanel.jpg "Screenshot of Blueprint BP_CubeCyan instance 'Details' panel")
-<br>*Fig. 3.8: Screenshot of BP_CubeCyan instances 'Details' panel, Publisher Actor-Component with assigned reference to a  PUB-Socket Actor instance*
+<br>*Fig. 3.8.: Screenshot of BP_CubeCyan instances 'Details' panel, Publisher Actor-Component with assigned reference to a  PUB-Socket Actor instance*
 
 ![Screenshot of Blueprint BP_CubeYellow instance 'Details' panel](Docs/ScreenshotDemoActor_BP_CubeYellow_DetailsPanel.jpg "Screenshot of Blueprint BP_CubeYellow instance 'Details' panel")
-<br>*Fig. 3.9: Screenshot of BP_CubeYellow instances 'Details' panel, Publisher Actor-Component with assigned reference to a  PUB-Socket Actor instance*
+<br>*Fig. 3.9.: Screenshot of BP_CubeYellow instances 'Details' panel, Publisher Actor-Component with assigned reference to a  PUB-Socket Actor instance*
 
 <div style='page-break-after: always'></div>
 
 ![Screenshot of Blueprint BP_CubeGreen instance 'Details' panel 1](Docs/ScreenshotDemoActor_BP_CubeGreen_DetailsPanel_1.jpg "Screenshot of Blueprint BP_CubeGreen instance 'Details' panel 1")
-<br>*Fig. 3.10: Screenshot of BP_CubeGreen instance 'Details' panel, Subscriber Actor-Component 'Subscriber_C' with assigned reference to a  SUB-Socket Actor instance*
+<br>*Fig. 3.10.: Screenshot of BP_CubeGreen instance 'Details' panel, Subscriber Actor-Component 'Subscriber_C' with assigned reference to a  SUB-Socket Actor instance*
 
 ![Screenshot of Blueprint BP_CubeGreen instance 'Details' panel 2](Docs/ScreenshotDemoActor_BP_CubeGreen_DetailsPanel_2.jpg "Screenshot of Blueprint BP_CubeGreen instance 'Details' panel 2")
-<br>*Fig. 3.11: Screenshot of BP_CubeGreen instance 'Details' panel, Subscriber Actor-Component 'Subscriber_Y' with assigned reference to a  SUB-Socket Actor instance*
+<br>*Fig. 3.11.: Screenshot of BP_CubeGreen instance 'Details' panel, Subscriber Actor-Component 'Subscriber_Y' with assigned reference to a  SUB-Socket Actor instance*
 
 <div style='page-break-after: always'></div>
 
-When the Map_PubSub_Demo level is open, click the Play button in the level editor to start Play-in-Editor PIE. The plugin writes to the output log with the custom log category LogNextGenMsg. A TCP communication can also be tracked in Wireshark.
+When the Map_PubSub_Demo level is open, click the Play button in the level editor to start Play-in-Editor PIE.<!--The plugin writes to the output log with the custom log category LogNextGenMsg. --> A TCP communication can also be tracked in Wireshark.
 
 ![Animation Screenshot of Demo Map PIE](Docs/DemoMapPIE.gif "Animation Screenshot of Demo Map PIE")
-<br>*Fig. 3.12: Animation Screenshot of Demo Map PIE*
+<br>*Fig. 3.12.: Animation Screenshot of Demo Map PIE*
 
 <!--
 
@@ -378,7 +378,7 @@ LogBlueprintUserMessages: [BP_CubeGreen_2] Hello from Cyan #2
 LogBlueprintUserMessages: [BP_CubeGreen_2] Hello from Yellow #2
 [...]
 ```
-*Listing 3.1: Output Log of Map_PubSub_Demo starting PIE, with custom log category LogNextGenMsg*
+*Listing 3.1.: Output Log of Map_PubSub_Demo starting PIE, with custom log category LogNextGenMsg*
 
 ```log
 [...]
@@ -393,13 +393,13 @@ LogNextGenMsg: NngSocketObject_8: Socket successfully closed.
 LogNextGenMsg: PubSocketActor1_2: Close socket done.
 [...]
 ```
-*Listing 3.2: Output Log of Map_PubSub_Demo stopping PIE, with custom log category LogNextGenMsg*
+*Listing 3.2.: Output Log of Map_PubSub_Demo stopping PIE, with custom log category LogNextGenMsg*
 
 -->
 
 ![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-1.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
 ![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-2.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
-<br>*Fig. 3.13: Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark*
+<br>*Fig. 3.13.: Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark*
 
 <div style='page-break-after: always'></div>
 
