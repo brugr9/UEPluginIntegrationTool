@@ -1,7 +1,8 @@
-# Unreal Engine Plugin: Integration Tool &ndash; Third Party Libraries
+# Unreal&reg; Engine Plugin: Integration Tool &ndash; Third Party Libraries
 
-<br>Author: [brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
-<br>Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
+This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*
+<br>Author: Roland Bruggmann aka brugr9
+<br>Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 
 ## Table of Contents
 
@@ -14,7 +15,7 @@
 
 ## 1. nng
 
-This plug-in makes use of *NNG&trade; Next generation of nanomsg&trade;* software (MIT License).
+This plugin makes use of *NNG&trade; Next generation of nanomsg&trade;* software (MIT License).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -48,7 +49,7 @@ IN THE SOFTWARE.
 
 ## 2. nngpp
 
-This plug-in makes use of *nngpp C++ wrapper* software (MIT License).
+This plugin makes use of *nngpp C++ wrapper* software (MIT License).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -75,3 +76,9 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
+
+---
+
+[![Creative Commons Attribution-ShareAlike 4.0 International License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+[*Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*](https://github.com/brugr9/UEPluginIntegrationTool/) © 2022 by [Roland Bruggmann aka brugr9](https://github.com/brugr9/) is licensed under [Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
