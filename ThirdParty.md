@@ -1,6 +1,5 @@
 # Unreal Engine Plugin: Integration Tool &ndash; Third Party Libraries
 
-Plug-in Version: 1.0.0
 <br>Author: [brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 <br>Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
 

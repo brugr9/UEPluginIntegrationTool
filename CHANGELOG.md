@@ -3,6 +3,10 @@
 Author: [brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 <br>Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
 
+## Release v1.0.2
+
+* fix: Update uplugin Docs URL
+
 ## Release v1.0.1
 
 * fix: nng close socket

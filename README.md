@@ -2,7 +2,6 @@
 
 Adds Blueprint support for asynchronous messaging with NNG&trade;
 
-Plugin Version: 1.0.1
 <br>Author: [brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 <br>Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
 
