@@ -289,7 +289,7 @@ The demo implements a PubSub-scheme as follows:
 
 <div style='page-break-after: always'></div>
 
-The cyan and the yellow cube each use a Publisher Actor-Component and loop publishing a message 'Hello from Cyan #1' with topic 'Cyan' or 'Hello from Yellow #1' with topic 'Yellow' respectively.
+The cyan and the yellow cube each use a Publisher Actor-Component and loop publishing a message 'Hello from Cyan' with topic 'Cyan' or 'Hello from Yellow' with topic 'Yellow' respectively.
 
 ![Screenshot of Blueprint BP_CubeCyan Event Graph](Docs/ScreenshotDemoActor_BP_CubeCyan.jpg "Screenshot of Blueprint BP_CubeCyan Event Graph")
 <br>*Fig. 3.3.: Screenshot of Blueprint BP_CubeCyan Event Graph*
