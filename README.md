@@ -1,10 +1,11 @@
 # Unreal&reg; Engine Plugin: Integration Tool &ndash; README
 
-Adds Blueprint support for asynchronous messaging with NNG&trade;
+Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generation of nanomsg&trade;* Software
 
 This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*
 <br>Author: Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
 <br>Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
+<br>Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
 
 ![FeaturedImage](Docs/FeaturedImage894x488.jpg "FeaturedImage")
 
