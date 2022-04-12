@@ -3,7 +3,7 @@
 Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generation of nanomsg&trade;* Software
 
 This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*
-<br>Author: Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
+<br>Author: Copyright 2022 Roland Bruggmann aka brugr9.
 <br>Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 <br>Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
 
@@ -22,8 +22,8 @@ Features:
 * Publish-Subscribe aka PUB/SUB Pattern
 * TCP and INPROC
 * PUB-Socket Actor and SUB-Socket Actor with Blueprint callable function nodes to
-  * Open or close the socket; events on open or on closed and on errors
-  * Bind an endpoint or connect to an endpoint; events on bound or on connected and on errors
+  * Open or close the socket; events on open or on closed and on error
+  * Bind an endpoint or connect to an endpoint; events on bound or on connected and on error
 * Publisher Actor-Component with Blueprint callable function node to publish messages with a specified topic;<br>event on message published
 * Subscriber Actor-Component with Blueprint callable function nodes to subscribe or unsubscribe a topic;<br>event on subscribed or on unsubscribed a topic and on received a message
 * Demo Map and Blueprints
@@ -102,13 +102,11 @@ LogNextGenMsg: Using NNG version 1.5.2
 ### 2.1. Concept
 
 <!--
-
 ![Screenshot of Module NextGenMsg C++ Classes](Docs/ScreenshotPluginCppClasses.jpg "Screenshot of Module NextGenMsg C++ Classes")
 <br>*Fig. 2.1.: Screenshot of Module NextGenMsg C++ Classes*
 
 ![Class Diagram Module NextGenMsg](Docs/ModuleClassDiagram.jpg "Class Diagram Module NextGenMsg")
 <br>*Fig. 2.2.: Class Diagram Module NextGenMsg*
-
 -->
 
 Publisher and subscriber as actor components are responsible for publishing messages and subscribing to topics and receiving messages. These components contain as a variable a topic to publish or subscribe to. As another variable they contain a reference to a PUB- or SUB-socket instance they work with.
@@ -117,7 +115,6 @@ Publisher and subscriber as actor components are responsible for publishing mess
 * One or multiple Subscriber Actor-Components can access the same SUB-Socket Actor to subscribe to a topic and to receive messages from the same endpoint (`Subscriber : SUB-Socket = n : 1`).
 
 <!--
-
 #### 2.1.1. Abstract Socket Actor
 
 A NNG&trade;socket can link an endpoint, more precisely it can bind a local address or connect to a remote address. Therefore, the plugin's C++ class `NngSocketActor` has:
@@ -147,7 +144,6 @@ The plugin's C++ class `NngSocketActor` holds a C++ class `NngSocketObject` whic
 
 * PUB-Socket Actor: C++ class `NngPubSocketActor` inherits from abstract C++ class `NngSocketActor`
 * SUB-Socket Actor: C++ class `NngSubSocketActor` inherits from abstract C++ class `NngSocketActor`
-
 -->
 
 ### 2.2. Actors
@@ -348,6 +344,7 @@ When the Map_PubSub_Demo level is open, click the Play button in the level edito
 <!--
 The plugin writes to the output log with the custom log category LogNextGenMsg.
 
+*Listing 3.1.: Output Log of Map_PubSub_Demo starting PIE*
 ```log
 [...]
 PIE: New page: PIE session: Map_PubSub_Demo ([...])
@@ -380,8 +377,8 @@ LogBlueprintUserMessages: [BP_CubeGreen_2] Hello from Cyan #2
 LogBlueprintUserMessages: [BP_CubeGreen_2] Hello from Yellow #2
 [...]
 ```
-*Listing 3.1.: Output Log of Map_PubSub_Demo starting PIE, with custom log category LogNextGenMsg*
 
+*Listing 3.2.: Output Log of Map_PubSub_Demo stopping PIE*
 ```log
 [...]
 LogWorld: BeginTearingDown for /IntegrationTool/Demo/Maps/UEDPIE_0_Map_PubSub_Demo
@@ -395,8 +392,6 @@ LogNextGenMsg: NngSocketObject_8: Socket successfully closed.
 LogNextGenMsg: PubSocketActor1_2: Close socket done.
 [...]
 ```
-*Listing 3.2.: Output Log of Map_PubSub_Demo stopping PIE, with custom log category LogNextGenMsg*
-
 -->
 
 <!--
@@ -405,7 +400,6 @@ A TCP communication can also be tracked in Wireshark.
 ![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-1.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
 ![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-2.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
 <br>*Fig. 3.13.: Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark*
-
 -->
 
 ## A. Attribution
@@ -418,12 +412,8 @@ A TCP communication can also be tracked in Wireshark.
 * *Unreal&reg; Engine* software Homepage: [https://www.unrealengine.com](https://www.unrealengine.com)
 * *NNG&trade; Next generation of nanomsg&trade;* software Homepage: [https://nng.nanomsg.org](https://nng.nanomsg.org)
 
-<!--
-
 ---
 
 [![Creative Commons Attribution-ShareAlike 4.0 International License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[*Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*](https://github.com/brugr9/UEPluginIntegrationTool/) © 2022 by [Roland Bruggmann aka brugr9](https://github.com/brugr9/) is licensed under [Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
-
--->
+[*Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*](https://github.com/brugr9/UEPluginIntegrationTool/) &copy; 2022 by [Roland Bruggmann aka brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
