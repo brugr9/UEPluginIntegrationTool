@@ -5,6 +5,10 @@ This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Do
 <br>Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 <br>Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
 
+## Upcoming Release
+
+* fix: UE_LOG, not TEXT(\_\_FUNCTION\_\_) but *FString(\_\_FUNCTION\_\_)
+
 ## Release v1.0.1
 
 * fix: nng close socket

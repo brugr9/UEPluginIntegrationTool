@@ -27,7 +27,7 @@ Features:
 * Publisher Actor-Component with Blueprint callable function node to publish messages with a specified topic;<br>event on message published
 * Subscriber Actor-Component with Blueprint callable function nodes to subscribe or unsubscribe a topic;<br>event on subscribed or on unsubscribed a topic and on received a message
 * Demo Map and Blueprints
-<!-- * Custom log category LogNextGenMsg -->
+* Custom log category LogNextGenMsg
 
 Code Modules:
 
@@ -69,7 +69,6 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
 * [1. Installation](#1-installation)
 * [2. Usage](#2-usage)
   * [2.1. Concept](#21-concept)
-    <!-- * [2.1.1. Abstract Socket Actor](#221-abstract-socket-actor) -->
   * [2.2. Actors](#22-actors)
     * [2.2.1. PUB-Socket Actor](#221-pub-socket-actor)
     * [2.2.2. SUB-Socket Actor](#222-sub-socket-actor)
@@ -101,50 +100,10 @@ LogNextGenMsg: Using NNG version 1.5.2
 
 ### 2.1. Concept
 
-<!--
-![Screenshot of Module NextGenMsg C++ Classes](Docs/ScreenshotPluginCppClasses.jpg "Screenshot of Module NextGenMsg C++ Classes")
-<br>*Fig. 2.1.: Screenshot of Module NextGenMsg C++ Classes*
-
-![Class Diagram Module NextGenMsg](Docs/ModuleClassDiagram.jpg "Class Diagram Module NextGenMsg")
-<br>*Fig. 2.2.: Class Diagram Module NextGenMsg*
--->
-
 Publisher and subscriber as actor components are responsible for publishing messages and subscribing to topics and receiving messages. These components contain as a variable a topic to publish or subscribe to. As another variable they contain a reference to a PUB- or SUB-socket instance they work with.
 
 * One or multiple Publisher Actor-Components can access the same PUB-Socket Actor to send messages to the same endpoint (`Publisher : PUB-Socket = n : 1`).
 * One or multiple Subscriber Actor-Components can access the same SUB-Socket Actor to subscribe to a topic and to receive messages from the same endpoint (`Subscriber : SUB-Socket = n : 1`).
-
-<!--
-#### 2.1.1. Abstract Socket Actor
-
-A NNG&trade;socket can link an endpoint, more precisely it can bind a local address or connect to a remote address. Therefore, the plugin's C++ class `NngSocketActor` has:
-
-<div style='page-break-after: always'></div>
-
-* Variables, Group 'Endpoint':
-  * Transport Type (`Select`): `tcp` (default), `inproc`
-  * Host (`String`), default `127.0.0.1`
-  * Port (`Integer`), default `5555`
-* Functions:
-  * `Open`, `IsOpen`
-  * `Bind`, `IsBound` (returns a `Boolean`)
-  * `Connect`, `IsConnected` (returns a `Boolean`)
-  * `IsLinked` (returns a `Boolean`)
-  * `Close`
-* Events (Delegates):
-  * `OnOpen`, `OnOpenError` (returns an error message as `String`)
-  * `OnBound`, `OnBindError` (returns an error message as `String`)
-  * `OnConnected`, `OnConnectError` (returns an error message as `String`)
-  * `OnLinked`, `OnLinkError` (returns an error message as `String`)
-  * `OnClosed`, `OnCloseError` (returns an error message as `String`)
-
-Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`.
-
-The plugin's C++ class `NngSocketActor` holds a C++ class `NngSocketObject` which acts as a third party library code wrapper where a low level NNG&trade; `nng::socket` and its functions are accessed. The C++ class `NngSocketActor` is an abstract class and is there to be inherited by the messaging pattern specific socket actors:
-
-* PUB-Socket Actor: C++ class `NngPubSocketActor` inherits from abstract C++ class `NngSocketActor`
-* SUB-Socket Actor: C++ class `NngSubSocketActor` inherits from abstract C++ class `NngSocketActor`
--->
 
 ### 2.2. Actors
 
@@ -341,7 +300,6 @@ When the Map_PubSub_Demo level is open, click the Play button in the level edito
 ![Animation Screenshot of Demo Map PIE](Docs/DemoMapPIE.gif "Animation Screenshot of Demo Map PIE")
 <br>*Fig. 3.12.: Animation Screenshot of Demo Map PIE*
 
-<!--
 The plugin writes to the output log with the custom log category LogNextGenMsg.
 
 *Listing 3.1.: Output Log of Map_PubSub_Demo starting PIE*
@@ -392,15 +350,6 @@ LogNextGenMsg: NngSocketObject_8: Socket successfully closed.
 LogNextGenMsg: PubSocketActor1_2: Close socket done.
 [...]
 ```
--->
-
-<!--
-A TCP communication can also be tracked in Wireshark.
-
-![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-1.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
-![Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark](Docs/Screenshot-Wireshark-2.jpg "Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark")
-<br>*Fig. 3.13.: Screenshot of TCP communication over localhost and port 5555 tracked in Wireshark*
--->
 
 ## A. Attribution
 
