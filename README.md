@@ -1,11 +1,12 @@
-# Unreal&reg; Engine Plugin: Integration Tool &ndash; README
+# Unreal&reg; Engine Plugin: Integration Tool
 
 Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generation of nanomsg&trade;* Software
 
 This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*
-<br>Author: Copyright 2022 Roland Bruggmann aka brugr9.
-<br>Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
-<br>Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
+
+* Author: Copyright 2022 Roland Bruggmann aka brugr9
+* Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
+* Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
 
 ![FeaturedImage](Docs/FeaturedImage894x488.jpg "FeaturedImage")
 
@@ -46,7 +47,7 @@ Supported Target Build Platforms: Windows (Win64)
 
 Documentation:
 
-* Readme / ThirdParty / Changelog: [https://github.com/brugr9/UEPluginIntegrationTool/](https://github.com/brugr9/UEPluginIntegrationTool/)
+* Readme, Changelog: [https://github.com/brugr9/UEPluginIntegrationTool/](https://github.com/brugr9/UEPluginIntegrationTool/)
 
 Additional Notes:
 
@@ -60,7 +61,7 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
 
 <div style='page-break-after: always'></div>
 
-# Documentation
+# Readme
 
 ## Table of Contents
 
@@ -358,8 +359,7 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 
 ## B. References
 
-* *Unreal&reg; Engine* software Homepage: [https://www.unrealengine.com](https://www.unrealengine.com)
-* *NNG&trade; Next generation of nanomsg&trade;* software Homepage: [https://nng.nanomsg.org](https://nng.nanomsg.org)
+* *Unreal&reg; Engine Plugin: Integration Tool* by Roland Bruggmann aka brugr9 on Unreal&reg; Marketplace: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool)
 
 ---
 
