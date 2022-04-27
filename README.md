@@ -229,7 +229,7 @@ A Subscriber Actor-Component has:
 
 ## 3. Demo
 
-Find the plugin folders in the editors content browser by checking `View Options > Show Engine Content` and navigate to the folder 'Integration Tool Content'. The folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with a map Map_PubSub_Demo.
+In the content browser enable the listing of plugin folders by checking `View Options > Show Engine Content`. Find and navigate to folder 'Integration Tool Content'. The folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with a map Map_PubSub_Demo.
 
 ![Screenshot of Plugin Content](Docs/ScreenshotPluginContent.jpg "Screenshot of Plugin Content")
 <br>*Fig. 3.1.: Screenshot of Content Browser with 'Integration Tool' Content*
