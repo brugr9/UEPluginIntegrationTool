@@ -244,6 +244,8 @@ The demo implements a PubSub-scheme as follows:
 ![Demo PubSub-Scheme](Docs/Demo-PubSub.jpg "Demo PubSub-Scheme")
 <br>*Fig. 3.2.: Demo PubSub-Scheme*
 
+Please assure to have the corresponding firewall configured to allow traffic over localhost port 5555.
+
 <div style='page-break-after: always'></div>
 
 The cyan and the yellow cube each use a Publisher Actor-Component and loop publishing a message 'Hello from Cyan' with topic 'Cyan' or 'Hello from Yellow' with topic 'Yellow' respectively.
