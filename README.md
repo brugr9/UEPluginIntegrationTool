@@ -81,7 +81,7 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
 * [3. Demo](#3-demo)
 * [A. Attribution](#a-attribution)
 * [B. References](#b-references)
-* [C. Acknowledgments](#b-acknowledgments)
+* [C. Acknowledgments](#c-acknowledgments)
 
 <!-- End Document Outline -->
 
