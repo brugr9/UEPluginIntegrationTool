@@ -6,6 +6,8 @@ This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Do
 * Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 * Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
 
+---
+
 ## Table of Contents
 
 <!-- Start Document Outline -->
