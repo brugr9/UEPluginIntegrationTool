@@ -1,14 +1,16 @@
 # Unreal&reg; Engine Plugin: Integration Tool
 
-Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generation of nanomsg&trade;* Software
-
 This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*
 
 * Author: Copyright 2022 Roland Bruggmann aka brugr9
 * Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 * Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
 
+---
+
 ![FeaturedImage](Docs/FeaturedImage894x488.jpg "FeaturedImage")
+
+Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generation of nanomsg&trade;* Software
 
 ## Description
 
@@ -47,7 +49,7 @@ Supported Target Build Platforms: Windows (Win64)
 
 Documentation:
 
-* Readme, Changelog: [https://github.com/brugr9/UEPluginIntegrationTool/](https://github.com/brugr9/UEPluginIntegrationTool/)
+* Readme, Changelog: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool)
 
 Additional Notes:
 
@@ -79,6 +81,7 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
 * [3. Demo](#3-demo)
 * [A. Attribution](#a-attribution)
 * [B. References](#b-references)
+* [C. Acknowledgments](#b-acknowledgments)
 
 <!-- End Document Outline -->
 
@@ -362,6 +365,20 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 ## B. References
 
 * *Unreal&reg; Engine Plugin: Integration Tool* by Roland Bruggmann aka brugr9 on Unreal&reg; Marketplace: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool)
+
+## C. Acknowledgments
+
+### Software
+
+To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software in an academic paper, please cite
+
+> Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool* (Version [#.#.#], UE[4,5,#]). Unreal&reg; Marketplace. URL: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool). Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
+
+### Documentation
+
+To acknowledge *"Volume Creator: An Unreal® Engine Plugin for Rendering of Medical Data &mdash; Documentation"* (be it , e.g., the Readme or the ChangeLog) in an academic paper, please cite
+
+> Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation*. GitHub; accessed [Year Month Day]. URL: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool). Licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
 <!-- Footer -->
