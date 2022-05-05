@@ -1,4 +1,4 @@
-# Unreal&reg; Engine Plugin: Integration Tool
+# Unreal&reg; Engine Plugin: Integration Tool &mdash; Readme
 
 This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*
 
@@ -7,6 +7,7 @@ This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Do
 * Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
 
 ---
+<!-- UE Marketplace : Begin 1/2 -->
 
 ![FeaturedImage](Docs/FeaturedImage894x488.jpg "FeaturedImage")
 
@@ -18,47 +19,7 @@ This plugin enables asynchronous, broker-less messaging using *NNG&trade; next g
 
 The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with, e.g., an enterprise service bus or an event bus/broker resp. Other use cases could be data streaming or instant messaging from or into a game.
 
-## Technical Information
-
-Features:
-
-* Publish-Subscribe aka PUB/SUB Pattern
-* TCP and INPROC
-* PUB-Socket Actor and SUB-Socket Actor with Blueprint callable function nodes to
-  * Open or close the socket; events on open or on closed and on error
-  * Bind an endpoint or connect to an endpoint; events on bound or on connected and on error
-* Publisher Actor-Component with Blueprint callable function node to publish messages with a specified topic;<br>event on message published
-* Subscriber Actor-Component with Blueprint callable function nodes to subscribe or unsubscribe a topic;<br>event on subscribed or on unsubscribed a topic and on received a message
-* Demo Map and Blueprints
-* Custom log category LogNextGenMsg
-
-Code Modules:
-
-* NextGenMsg \[Runtime\]
-* NextGenMsgEditor \[Editor\]
-
-Number of Blueprints: 4
-
-Number of C++ Classes: 7
-
-Network Replicated: No
-
-Supported Development Platforms: Windows
-
-Supported Target Build Platforms: Windows (Win64)
-
-Documentation:
-
-* Readme, Changelog: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool)
-
-Additional Notes:
-
-* Support: [https://github.com/brugr9/UEPluginIntegrationTool/discussions](https://github.com/brugr9/UEPluginIntegrationTool/discussions)
-
-## Tags
-
-Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
-
+<!-- UE Marketplace : End 1/2 -->
 ---
 
 <div style='page-break-after: always'></div>
@@ -113,8 +74,8 @@ Publisher and subscriber as actor components are responsible for publishing mess
 
 The plugin provides with PUB-Sockets and SUB-Sockets which are Actors and may be found in the 'Place Actors' panel, category 'All Classes' and can be added to a map by drag'n'drop. The added actors then are listed in the world outliner. Please consider that in the viewport no sprites are shown for these sockets.
 
-![Screenshot of Socket Actors listed in Editor Tab 'Place Actors'](Docs/ScreenshotActors.jpg "Screenshot of Socket Actors listed in Editor Tab 'Place Actors'")
-<br>*Fig. 2.3.: Screenshot of Socket Actors listed in Editor Tab 'Place Actors'*
+![Screenshot of Editor Tab 'Place Actors' listing Socket Actors](Docs/ScreenshotActors.jpg "Screenshot of Editor Tab 'Place Actors' listing Socket Actors")
+<br>*Fig. 2.3.: Screenshot of Editor Tab 'Place Actors' listing Socket Actors*
 
 <div style='page-break-after: always'></div>
 
@@ -126,6 +87,12 @@ A PUB-Socket Actor has:
   * Transport Type (`Select`): `tcp` (default), `inproc`
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
+
+![Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotPubSocketActor.jpg "Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint")
+<br>*Fig. 2.4.: Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint*
+
+<div style='page-break-after: always'></div>
+
 * Functions:
   * `Open`, `IsOpen`
   * `Bind`, `IsBound` (returns a `Boolean`)
@@ -141,13 +108,8 @@ A PUB-Socket Actor has:
 
 Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`.
 
-<div style='page-break-after: always'></div>
-
-![Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotPubSocketActor.jpg "Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint")
-<br>*Fig. 2.4.: Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint*
-
-![Screenshot of PUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotPubSocketActorFunctionAndEventNodes.jpg "Screenshot of PUB-Socket Actor function and event nodes in Level Blueprint")
-<br>*Fig. 2.5.: Screenshot of PUB-Socket Actor function and event nodes in a Level Blueprint*
+![Screenshot of a Level Blueprint with function and event nodes of a PUB-Socket Actor](Docs/ScreenshotPubSocketActorFunctionAndEventNodes.jpg "Screenshot of a Level Blueprint with function and event nodes of a PUB-Socket Actor")
+<br>*Fig. 2.5.: Screenshot of a Level Blueprint with function and event nodes of a PUB-Socket Actor*
 
 <div style='page-break-after: always'></div>
 
@@ -159,6 +121,12 @@ A SUB-Socket Actor has:
   * Transport Type (`Select`): `tcp` (default), `inproc`
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
+
+![Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotSubSocketActor.jpg "Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint")
+<br>*Fig. 2.6.: Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint*
+
+<div style='page-break-after: always'></div>
+
 * Functions:
   * `Open`, `IsOpen`
   * `Bind`, `IsBound` (returns a `Boolean`)
@@ -174,13 +142,8 @@ A SUB-Socket Actor has:
 
 Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`. In addition a SUB-Socket Actor has a Blueprint-callable function `Receive` to trigger a message pickup.
 
-<div style='page-break-after: always'></div>
-
-![Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotSubSocketActor.jpg "Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint")
-<br>*Fig. 2.6.: Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint*
-
-![Screenshot of SUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotSubSocketActorFunctionAndEventNodes.jpg "Screenshot of SUB-Socket Actor function and event nodes in Level Blueprint")
-<br>*Fig. 2.7.: Screenshot of SUB-Socket Actor function and event nodes in a Level Blueprint*
+![Screenshot of a Level Blueprint with function and event nodes of a SUB-Socket Actor](Docs/ScreenshotSubSocketActorFunctionAndEventNodes.jpg "Screenshot of a Level Blueprint with function and event nodes of a SUB-Socket Actor")
+<br>*Fig. 2.7.: Screenshot of a Level Blueprint with function and event nodes of a SUB-Socket Actor*
 
 <div style='page-break-after: always'></div>
 
@@ -356,6 +319,8 @@ LogNextGenMsg: NngSocketObject_8: Socket successfully closed.
 LogNextGenMsg: PubSocketActor1_2: Close socket done.
 [...]
 ```
+
+<div style='page-break-after: always'></div>
 
 ## A. Attribution
 
