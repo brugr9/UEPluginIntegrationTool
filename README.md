@@ -24,8 +24,6 @@ The delivered assets provide transporting messages over a network and can be use
 
 <div style='page-break-after: always'></div>
 
-# Readme
-
 ## Table of Contents
 
 <!-- Start Document Outline -->
@@ -341,7 +339,7 @@ To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software in an ac
 
 ### Documentation
 
-To acknowledge *"Volume Creator: An Unreal® Engine Plugin for Rendering of Medical Data &mdash; Documentation"* (be it , e.g., the Readme or the ChangeLog) in an academic paper, please cite
+To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation"* (be it , e.g., the Readme or the ChangeLog) in an academic paper, please cite
 
 > Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation*. GitHub; accessed [Year Month Day]. URL: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool). Licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
 
