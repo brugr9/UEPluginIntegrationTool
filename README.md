@@ -339,9 +339,9 @@ To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software in an ac
 
 ### Documentation
 
-To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation"* (be it , e.g., the Readme or the ChangeLog) in an academic paper, please cite
+To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation"* (be it , e.g., the Readme or the Changelog) in an academic paper, please cite
 
-> Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation*. GitHub; accessed [Year Month Day]. URL: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool). Licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
+> Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation*, \[Readme, Changelog\]. GitHub; accessed [Year Month Day]. URL: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool). Licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
 <!-- Footer -->
