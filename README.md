@@ -333,13 +333,13 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 
 ### Software
 
-To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software in an academic paper, please cite
+To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software, please cite
 
 > Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool*, Version [#.#.#], UE [4.## or 5.#]. Unreal&reg; Marketplace. URL: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool). Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
 
 ### Documentation
 
-To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation"* (be it , e.g., the Readme or the Changelog) in an academic paper, please cite
+To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation"* (be it , e.g., the Readme or the Changelog), please cite
 
 > Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation*, \[Readme, Changelog\]. GitHub; accessed [Year Month Day]. URL: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool). Licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
 
