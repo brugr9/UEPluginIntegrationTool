@@ -17,7 +17,7 @@ Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generat
 
 This plugin enables asynchronous, broker-less messaging using *NNG&trade; next generation of nanomsg&trade;* software from the Blueprint visual scripting system.
 
-The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with, e.g., an enterprise service bus or an event bus/broker resp. Other use cases could be data streaming or instant messaging from or into a game.
+The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an enterprise service bus or an event broker resp. like, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) MQTT Messaging Bus. Other use cases could be data streaming or instant messaging from or into a game.
 
 <!-- UE Marketplace : End 1/2 -->
 ---
@@ -324,6 +324,7 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 
 * The word mark *Unreal&reg;* and its logo are Epic Games, Inc. trademarks or registered trademarks in the US and elsewhere (cp. Branding Guidelines and Trademark Usage, URL: [https://www.unrealengine.com/en-US/branding](https://www.unrealengine.com/en-US/branding))
 * The word marks *nanomsg&trade;* and *NNG&trade;* and its logos are trademarks of Garrett D'Amore, used with permission (cp. Trademark Policy, URL: [https://nanomsg.org/trademarks.html](https://nanomsg.org/trademarks.html))
+* The word marks *EMQ&trade;* and *NanoMQ&trade;* and its logos are trademarks of EMQ Technologies Co., Ltd.
 
 ## B. References
 
@@ -331,13 +332,9 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 
 ## C. Acknowledgments
 
-### Software
-
 To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software, please cite
 
 > Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool*, Version [#.#.#], UE [4.## or 5.#]. Unreal&reg; Marketplace. URL: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool). Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
-
-### Documentation
 
 To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation"* (be it , e.g., the Readme or the Changelog), please cite
 
