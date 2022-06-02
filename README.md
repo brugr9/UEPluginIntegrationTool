@@ -17,7 +17,9 @@ Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generat
 
 This plugin enables asynchronous, broker-less messaging using *NNG&trade; next generation of nanomsg&trade;* software from the Blueprint visual scripting system.
 
-The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an enterprise service bus or an event broker resp. like, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) MQTT Messaging Bus. Other use cases could be data streaming or instant messaging from or into a game.
+The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an enterprise service bus or an event broker. Other use cases could be data streaming or instant messaging from or into a game.
+
+Suits well for the use with, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) MQTT Messaging Bus.
 
 <!-- UE Marketplace : End 1/2 -->
 ---
