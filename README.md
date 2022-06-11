@@ -206,13 +206,13 @@ The demo implements a PubSub-scheme as follows:
 
 * A PUB-Socket Actor instance binds address `tcp://127.0.0.1:5555`
 * A SUB-Socket Actor instance connects address `tcp://127.0.0.1:5555`
-* Two Subscriber Actor-Components subscribe via the SUB-Socket Actor instance
-* Two Publisher Actor-Components publish via the PUB-Socket Actor instance
+* Two Publisher Actor-Components (each in a cyan and a yellow cube) publish via the PUB-Socket Actor instance
+* Two Subscriber Actor-Components (both in a green cube) subscribe via the SUB-Socket Actor instance
+
+Please assure to have the corresponding firewall configured to allow traffic over localhost port 5555.
 
 ![Demo PubSub-Scheme](Docs/Demo-PubSub.jpg "Demo PubSub-Scheme")
 <br>*Fig. 3.2.: Demo PubSub-Scheme*
-
-Please assure to have the corresponding firewall configured to allow traffic over localhost port 5555.
 
 <div style='page-break-after: always'></div>
 
