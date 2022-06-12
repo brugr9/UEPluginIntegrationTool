@@ -42,7 +42,7 @@ Suits well for the use with, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) &nd
 * [3. Demo](#3-demo)
 * [A. Attribution](#a-attribution)
 * [B. References](#b-references)
-* [C. Acknowledgments](#c-acknowledgments)
+* [C. Citation](#c-citation)
 
 <!-- End Document Outline -->
 
@@ -334,7 +334,7 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 
 * *Unreal&reg; Engine Plugin: Integration Tool* by Roland Bruggmann aka brugr9 on Unreal&reg; Marketplace: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool)
 
-## C. Acknowledgments
+## C. Citation
 
 To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software, please cite
 
