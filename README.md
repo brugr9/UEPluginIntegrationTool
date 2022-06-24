@@ -229,22 +229,24 @@ A Subscriber Actor-Component has:
 
 ## 3. Demo
 
-In the content browser enable the listing of plugin folders by checking `View Options > Show Engine Content`. Find and navigate to folder 'Integration Tool Content'. The folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with a map Map_PubSub_Demo.
+Usually, the PUB-SUB pattern is used to connect several endpoints of distributed systems whose applications run on different machines. For the demo, we have endpoints in the same application for simplicity's sake &ndash; a ZeroMQ PUB socket and a ZeroMQ SUB socket are here in a level named Map_PubSub_Demo.
+
+In the content browser enable the listing of plugin folders by checking `Settings > Show Engine Content`. Find and navigate to folder 'Integration Tool Content'. The folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with the level named Map_PubSub_Demo.
 
 ![Screenshot of Plugin Content](Docs/ScreenshotPluginContent.jpg "Screenshot of Plugin Content")
-<br>*Fig. 3.1.: Screenshot of Content Browser with 'Integration Tool' Content*
+<br>*Fig. 3.1.: Screenshot of Content Browser with Integration Tool Content*
 
 The demo implements a PubSub-scheme as follows:
 
 * A PUB-Socket Actor instance binds address `tcp://127.0.0.1:5555`
 * A SUB-Socket Actor instance connects address `tcp://127.0.0.1:5555`
-* Two Subscriber Actor-Components subscribe via the SUB-Socket Actor instance
-* Two Publisher Actor-Components publish via the PUB-Socket Actor instance
+* Two Publisher Actor-Components (each in a cyan and a yellow cube) publish via the PUB-Socket Actor instance
+* Two Subscriber Actor-Components (both in a green cube) subscribe via the SUB-Socket Actor instance
+
+Please assure to have the corresponding firewall configured to allow traffic over localhost port 5555.
 
 ![Demo PubSub-Scheme](Docs/Demo-PubSub.jpg "Demo PubSub-Scheme")
 <br>*Fig. 3.2.: Demo PubSub-Scheme*
-
-Please assure to have the corresponding firewall configured to allow traffic over localhost port 5555.
 
 <div style='page-break-after: always'></div>
 
