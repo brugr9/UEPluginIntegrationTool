@@ -195,7 +195,7 @@ A Subscriber Actor-Component has:
 
 ## 3. Demo
 
-Usually, the PUB-SUB pattern is used to connect endpoints of distributed systems whose applications usually run on different machines. For the demo, two endpoints are in the same application for simplicity's sake &ndash; so both the ZeroMQ PUB socket and the ZeroMQ SUB socket are here in the level named Map_PubSub_Demo.
+Usually, the PUB-SUB pattern is used to connect several endpoints of distributed systems whose applications run on different machines. For the demo, we have endpoints in the same application for simplicity's sake &ndash; a ZeroMQ PUB socket and a ZeroMQ SUB socket are here in a level named Map_PubSub_Demo.
 
 In the content browser enable the listing of plugin folders by checking `Settings > Show Engine Content`. Find and navigate to folder 'Integration Tool Content'. The folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with the level named Map_PubSub_Demo.
 
@@ -206,8 +206,8 @@ The demo implements a PubSub-scheme as follows:
 
 * A PUB-Socket Actor instance binds address `tcp://127.0.0.1:5555`
 * A SUB-Socket Actor instance connects address `tcp://127.0.0.1:5555`
-* Two Publisher Actor-Components (each in a cyan and a yellow cube) publish via the PUB-Socket Actor instance
-* Two Subscriber Actor-Components (both in a green cube) subscribe via the SUB-Socket Actor instance
+* Two Publisher Actor-Components (each in a cyan and a yellow cube) publish via a PUB-Socket Actor instance
+* Two Subscriber Actor-Components (both in a green cube) subscribe via a SUB-Socket Actor instance
 
 Please assure to have the corresponding firewall configured to allow traffic over localhost port 5555.
 
