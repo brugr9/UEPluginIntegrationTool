@@ -1,6 +1,4 @@
-# Unreal&reg; Engine Plugin: Integration Tool
-
-Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generation of nanomsg&trade;* Software
+# Unreal&reg; Engine Plugin: Integration Tool &mdash; Readme
 
 This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*
 
@@ -8,60 +6,25 @@ This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Do
 * Profile on UE Marketplace: [https://www.unrealengine.com/marketplace/profile/brugr9](https://www.unrealengine.com/marketplace/profile/brugr9)
 * Profile on Epic Developer Community: [https://dev.epicgames.com/community/profile/PQBq/brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9)
 
+---
+<!-- UE Marketplace : Begin 1/2 -->
+
 ![FeaturedImage](Docs/FeaturedImage894x488.jpg "FeaturedImage")
+
+Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generation of nanomsg&trade;* Software
 
 ## Description
 
 This plugin enables asynchronous, broker-less messaging using *NNG&trade; next generation of nanomsg&trade;* software from the Blueprint visual scripting system.
 
-The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with, e.g., an enterprise service bus or an event bus/broker resp. Other use cases could be data streaming or instant messaging from or into a game.
+The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an enterprise service bus or an event broker. Other use cases could be data streaming or instant messaging from or into a game.
 
-## Technical Information
+Suits well for the use with, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) &ndash; *"MQTT Messaging Bus for Edge Computing"*.
 
-Features:
-
-* Publish-Subscribe aka PUB/SUB Pattern
-* TCP and INPROC
-* PUB-Socket Actor and SUB-Socket Actor with Blueprint callable function nodes to
-  * Open or close the socket; events on open or on closed and on error
-  * Bind an endpoint or connect to an endpoint; events on bound or on connected and on error
-* Publisher Actor-Component with Blueprint callable function node to publish messages with a specified topic;<br>event on message published
-* Subscriber Actor-Component with Blueprint callable function nodes to subscribe or unsubscribe a topic;<br>event on subscribed or on unsubscribed a topic and on received a message
-* Demo Map and Blueprints
-* Custom log category LogNextGenMsg
-
-Code Modules:
-
-* NextGenMsg \[Runtime\]
-* NextGenMsgEditor \[Editor\]
-
-Number of Blueprints: 4
-
-Number of C++ Classes: 7
-
-Network Replicated: No
-
-Supported Development Platforms: Windows
-
-Supported Target Build Platforms: Windows (Win64)
-
-Documentation:
-
-* Readme, Changelog: [https://github.com/brugr9/UEPluginIntegrationTool/](https://github.com/brugr9/UEPluginIntegrationTool/)
-
-Additional Notes:
-
-* Support: [https://github.com/brugr9/UEPluginIntegrationTool/discussions](https://github.com/brugr9/UEPluginIntegrationTool/discussions)
-
-## Tags
-
-Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
-
+<!-- UE Marketplace : End 1/2 -->
 ---
 
 <div style='page-break-after: always'></div>
-
-# Readme
 
 ## Table of Contents
 
@@ -79,6 +42,7 @@ Messaging, Integration, M2M, IoT, Network, TCP, INPROC, Socket, PubSub, Runtime
 * [3. Demo](#3-demo)
 * [A. Attribution](#a-attribution)
 * [B. References](#b-references)
+* [C. Citation](#c-citation)
 
 <!-- End Document Outline -->
 
@@ -110,8 +74,8 @@ Publisher and subscriber as actor components are responsible for publishing mess
 
 The plugin provides with PUB-Sockets and SUB-Sockets which are Actors and may be found in the 'Place Actors' panel, category 'All Classes' and can be added to a map by drag'n'drop. The added actors then are listed in the world outliner. Please consider that in the viewport no sprites are shown for these sockets.
 
-![Screenshot of Socket Actors listed in Editor Tab 'Place Actors'](Docs/ScreenshotActors.jpg "Screenshot of Socket Actors listed in Editor Tab 'Place Actors'")
-<br>*Fig. 2.3.: Screenshot of Socket Actors listed in Editor Tab 'Place Actors'*
+![Screenshot of Editor Tab 'Place Actors' listing Socket Actors](Docs/ScreenshotActors.jpg "Screenshot of Editor Tab 'Place Actors' listing Socket Actors")
+<br>*Fig. 2.3.: Screenshot of Editor Tab 'Place Actors' listing Socket Actors*
 
 <div style='page-break-after: always'></div>
 
@@ -123,6 +87,12 @@ A PUB-Socket Actor has:
   * Transport Type (`Select`): `tcp` (default), `inproc`
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
+
+![Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotPubSocketActor.jpg "Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint")
+<br>*Fig. 2.4.: Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint*
+
+<div style='page-break-after: always'></div>
+
 * Functions:
   * `Open`, `IsOpen`
   * `Bind`, `IsBound` (returns a `Boolean`)
@@ -138,13 +108,8 @@ A PUB-Socket Actor has:
 
 Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`.
 
-<div style='page-break-after: always'></div>
-
-![Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotPubSocketActor.jpg "Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint")
-<br>*Fig. 2.4.: Screenshot of PUB-Socket Actor instance 'Details' panel with variables from Endpoint*
-
-![Screenshot of PUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotPubSocketActorFunctionAndEventNodes.jpg "Screenshot of PUB-Socket Actor function and event nodes in Level Blueprint")
-<br>*Fig. 2.5.: Screenshot of PUB-Socket Actor function and event nodes in a Level Blueprint*
+![Screenshot of a Level Blueprint with function and event nodes of a PUB-Socket Actor](Docs/ScreenshotPubSocketActorFunctionAndEventNodes.jpg "Screenshot of a Level Blueprint with function and event nodes of a PUB-Socket Actor")
+<br>*Fig. 2.5.: Screenshot of a Level Blueprint with function and event nodes of a PUB-Socket Actor*
 
 <div style='page-break-after: always'></div>
 
@@ -156,6 +121,12 @@ A SUB-Socket Actor has:
   * Transport Type (`Select`): `tcp` (default), `inproc`
   * Host (`String`), default `127.0.0.1`
   * Port (`Integer`), default `5555`
+
+![Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotSubSocketActor.jpg "Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint")
+<br>*Fig. 2.6.: Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint*
+
+<div style='page-break-after: always'></div>
+
 * Functions:
   * `Open`, `IsOpen`
   * `Bind`, `IsBound` (returns a `Boolean`)
@@ -171,13 +142,8 @@ A SUB-Socket Actor has:
 
 Upon successful `Open` or `Close`, the `OnOpen` or `OnClosed` event is triggered. Upon successful `Bind` or `Connect`, the `OnBound` or `OnConnected` event is triggered, as well as event `OnLinked` in both cases. If one the functions `IsBound` or `IsConnected` returns `true`, also the function `IsLinked` returns `true`. In addition a SUB-Socket Actor has a Blueprint-callable function `Receive` to trigger a message pickup.
 
-<div style='page-break-after: always'></div>
-
-![Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint](Docs/ScreenshotSubSocketActor.jpg "Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint")
-<br>*Fig. 2.6.: Screenshot of SUB-Socket Actor instance 'Details' panel with variables from Endpoint*
-
-![Screenshot of SUB-Socket Actor function and event nodes in Level Blueprint](Docs/ScreenshotSubSocketActorFunctionAndEventNodes.jpg "Screenshot of SUB-Socket Actor function and event nodes in Level Blueprint")
-<br>*Fig. 2.7.: Screenshot of SUB-Socket Actor function and event nodes in a Level Blueprint*
+![Screenshot of a Level Blueprint with function and event nodes of a SUB-Socket Actor](Docs/ScreenshotSubSocketActorFunctionAndEventNodes.jpg "Screenshot of a Level Blueprint with function and event nodes of a SUB-Socket Actor")
+<br>*Fig. 2.7.: Screenshot of a Level Blueprint with function and event nodes of a SUB-Socket Actor*
 
 <div style='page-break-after: always'></div>
 
@@ -231,7 +197,7 @@ A Subscriber Actor-Component has:
 
 Usually, the PUB-SUB pattern is used to connect several endpoints of distributed systems whose applications run on different machines. For the demo, we have endpoints in the same application for simplicity's sake &ndash; a ZeroMQ PUB socket and a ZeroMQ SUB socket are here in a level named Map_PubSub_Demo.
 
-In the content browser enable the listing of plugin folders by checking `Settings > Show Engine Content`. Find and navigate to folder 'Integration Tool Content'. The folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with the level named Map_PubSub_Demo.
+In the content browser enable the listing of plugin folders by checking `View Options > Show Engine Content`. Find and navigate to folder 'Integration Tool Content'. The folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with the level named Map_PubSub_Demo.
 
 ![Screenshot of Plugin Content](Docs/ScreenshotPluginContent.jpg "Screenshot of Plugin Content")
 <br>*Fig. 3.1.: Screenshot of Content Browser with Integration Tool Content*
@@ -356,17 +322,31 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 [...]
 ```
 
+<div style='page-break-after: always'></div>
+
 ## A. Attribution
 
 * The word mark *Unreal&reg;* and its logo are Epic Games, Inc. trademarks or registered trademarks in the US and elsewhere (cp. Branding Guidelines and Trademark Usage, URL: [https://www.unrealengine.com/en-US/branding](https://www.unrealengine.com/en-US/branding))
 * The word marks *nanomsg&trade;* and *NNG&trade;* and its logos are trademarks of Garrett D'Amore, used with permission (cp. Trademark Policy, URL: [https://nanomsg.org/trademarks.html](https://nanomsg.org/trademarks.html))
+* The word marks *EMQ&trade;* and *NanoMQ&trade;* and its logos are trademarks of EMQ Technologies Co., Ltd.
 
 ## B. References
 
 * *Unreal&reg; Engine Plugin: Integration Tool* by Roland Bruggmann aka brugr9 on Unreal&reg; Marketplace: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool)
 
+## C. Citation
+
+To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software, please cite
+
+> Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool*, Version [#.#.#], UE [4.## or 5.#]. Unreal&reg; Marketplace. URL: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool). Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
+
+To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation"* (be it , e.g., the Readme or the Changelog), please cite
+
+> Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation*, \[Readme, Changelog\]. GitHub; accessed [Year Month Day]. URL: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool). Licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
+
 ---
+<!-- Footer -->
 
 [![Creative Commons Attribution-ShareAlike 4.0 International License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[*Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation*](https://github.com/brugr9/UEPluginIntegrationTool/) &copy; 2022 by [Roland Bruggmann aka brugr9](https://dev.epicgames.com/community/profile/PQBq/brugr9) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
+*"Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation"* &copy; 2022 by [Roland Bruggmann](https://about.me/rbruggmann) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
