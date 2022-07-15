@@ -40,6 +40,7 @@ Suits well for the use with, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) &nd
     * [2.3.1. Publisher Actor-Component](#231-publisher-actor-component)
     * [2.3.2. Subscriber Actor-Component](#232-subscriber-actor-component)
 * [3. Demo](#3-demo)
+* [4. Unsupported](#4-unsupported)
 * [A. Attribution](#a-attribution)
 * [B. References](#b-references)
 * [C. Citation](#c-citation)
@@ -323,6 +324,21 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 ```
 
 <div style='page-break-after: always'></div>
+
+## 4. Unsupported
+
+Transport Protocol:
+
+* ipc:// (Inter Process Communication, aka UNIX domain socket)
+* ws:// and wss:// (WebSockets over TCP)
+
+Communication Pattern:
+
+* PAIR - simple one-to-one communication
+* BUS - simple many-to-many communication
+* REQREP - allows to build clusters of stateless services to process user requests
+* PIPELINE - aggregates messages from multiple sources and load balances them among many destinations
+* SURVEY - allows to query state of multiple applications in a single go
 
 ## A. Attribution
 
