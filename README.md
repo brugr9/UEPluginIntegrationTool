@@ -95,7 +95,7 @@ A PUB-Socket Actor has:
 <div style='page-break-after: always'></div>
 
 * Functions:
-  * `Open`, `IsOpen` (returns a Boolean)
+  * `Open`, `IsOpen` (returns a `Boolean`)
   * `Bind`, `IsBound` (returns a `Boolean`)
   * `Connect`, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
@@ -129,7 +129,7 @@ A SUB-Socket Actor has:
 <div style='page-break-after: always'></div>
 
 * Functions:
-  * `Open`, `IsOpen` (returns a Boolean)
+  * `Open`, `IsOpen` (returns a `Boolean`)
   * `Bind`, `IsBound` (returns a `Boolean`)
   * `Connect`, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
