@@ -19,7 +19,7 @@ This plugin enables asynchronous, broker-less messaging using *NNG&trade; next g
 
 The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an enterprise service bus or an event broker. Other use cases could be data streaming or instant messaging from or into a game.
 
-Suits well for the use with, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) &ndash; *"MQTT Messaging Bus for Edge Computing"*.
+<!-- Suits well for the use with, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) &ndash; *"MQTT Messaging Bus for Edge Computing"*. -->
 
 <!-- UE Marketplace : End 1/2 -->
 ---
