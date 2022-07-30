@@ -329,7 +329,8 @@ Transport Protocol:
 
 * ipc:// &ndash; Inter Process Communication, aka UNIX domain socket
 * ws:// and wss:// &ndash; WebSockets over TCP
-* ssl:// or tls://
+* tls://
+* zerotier://
 * mqtt:// (NNG&trade; does not provide with the MQTT transport protocol, neither does the plugin)
 
 Communication Pattern:
