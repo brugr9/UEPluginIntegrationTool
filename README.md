@@ -327,16 +327,18 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 
 Transport Protocol:
 
-* ipc:// (Inter Process Communication, aka UNIX domain socket)
-* ws:// and wss:// (WebSockets over TCP)
+* ipc:// &ndash; Inter Process Communication, aka UNIX domain socket
+* ws:// and wss:// &ndash; WebSockets over TCP
+* ssl:// or tls://
+* mqtt:// (NNG&trade; does not provide with the MQTT transport protocol, neither does the plugin)
 
 Communication Pattern:
 
-* PAIR - simple one-to-one communication
-* BUS - simple many-to-many communication
-* REQREP - allows to build clusters of stateless services to process user requests
-* PIPELINE - aggregates messages from multiple sources and load balances them among many destinations
-* SURVEY - allows to query state of multiple applications in a single go
+* PAIR &ndash; simple one-to-one communication
+* BUS &ndash; simple many-to-many communication
+* REQREP &ndash; allows to build clusters of stateless services to process user requests
+* PIPELINE &ndash; aggregates messages from multiple sources and load balances them among many destinations
+* SURVEY &ndash; allows to query state of multiple applications in a single go
 
 ## A. Attribution
 
