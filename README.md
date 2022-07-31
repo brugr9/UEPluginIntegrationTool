@@ -327,11 +327,11 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 
 Transport Protocol:
 
-* ipc:// &ndash; Inter Process Communication, aka UNIX domain socket
-* ws:// and wss:// &ndash; WebSockets over TCP
-* tls:// &ndash; Transport Layer Security
-* zt:// &ndash; Communication over a ZeroTier&trade; network
-* mqtt:// &ndash; MQ Telemetry Transport (NNG&trade; does not provide with the MQTT transport protocol yet, neither does the plugin)
+* `ipc://` &ndash; Inter Process Communication, aka UNIX domain socket
+* `ws://` and `wss://` &ndash; WebSockets over TCP
+* `tls://` &ndash; Transport Layer Security
+* `zt://` &ndash; Communication over a ZeroTier&trade; network
+* `mqtt://` &ndash; MQ Telemetry Transport (NNG&trade; does not provide with the MQTT transport protocol yet, neither does the plugin)
 
 Communication Pattern:
 
