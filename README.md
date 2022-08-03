@@ -17,9 +17,9 @@ Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generat
 
 This plugin enables asynchronous, broker-less messaging using *NNG&trade; next generation of nanomsg&trade;* software from the Blueprint visual scripting system.
 
-The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an enterprise service bus or an event broker. Other use cases could be data streaming or instant messaging from or into a game.
+The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an event broker. Other use cases could be data streaming or instant messaging from or into a game.
 
-Suits well for the use with, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) &ndash; *"MQTT Messaging Bus for Edge Computing"*.
+Suits well for the use with, e.g., [NanoMQ&trade;](https://nanomq.io/) which may act as a nanomsg/NNG&trade; proxy providing with MQTT and ZeroMQ protocol.
 
 <!-- UE Marketplace : End 1/2 -->
 ---
@@ -40,6 +40,7 @@ Suits well for the use with, e.g., EMQ's [NanoMQ&trade;](https://nanomq.io/) &nd
     * [2.3.1. Publisher Actor-Component](#231-publisher-actor-component)
     * [2.3.2. Subscriber Actor-Component](#232-subscriber-actor-component)
 * [3. Demo](#3-demo)
+* [4. Unsupported](#4-unsupported)
 * [A. Attribution](#a-attribution)
 * [B. References](#b-references)
 * [C. Citation](#c-citation)
@@ -94,7 +95,7 @@ A PUB-Socket Actor has:
 <div style='page-break-after: always'></div>
 
 * Functions:
-  * `Open`, `IsOpen`
+  * `Open`, `IsOpen` (returns a `Boolean`)
   * `Bind`, `IsBound` (returns a `Boolean`)
   * `Connect`, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
@@ -128,7 +129,7 @@ A SUB-Socket Actor has:
 <div style='page-break-after: always'></div>
 
 * Functions:
-  * `Open`, `IsOpen`
+  * `Open`, `IsOpen` (returns a `Boolean`)
   * `Bind`, `IsBound` (returns a `Boolean`)
   * `Connect`, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
@@ -195,14 +196,12 @@ A Subscriber Actor-Component has:
 
 ## 3. Demo
 
-Usually, the PUB-SUB pattern is used to connect several endpoints of distributed systems whose applications run on different machines. For the demo, we have endpoints in the same application for simplicity's sake &ndash; a ZeroMQ PUB socket and a ZeroMQ SUB socket are here in a level named Map_PubSub_Demo.
-
 In the content browser enable the listing of plugin folders by checking `View Options > Show Engine Content`. Find and navigate to folder 'Integration Tool Content'. The folder 'Demo' provides with three Blueprints BP_CubeCyan, BP_CubeYellow and BP_CubeGreen as well as with the level named Map_PubSub_Demo.
 
 ![Screenshot of Plugin Content](Docs/ScreenshotPluginContent.jpg "Screenshot of Plugin Content")
 <br>*Fig. 3.1.: Screenshot of Content Browser with Integration Tool Content*
 
-The demo implements a PubSub-scheme as follows:
+Usually, the PUB-SUB pattern is used to connect several endpoints of distributed systems whose applications run on different machines. For the demo, we have endpoints in the same application for simplicity's sake &ndash; a PUB-Socket and a SUB-Socket are here in the level named Map_PubSub_Demo. The demo implements a PubSub-scheme as follows:
 
 * A PUB-Socket Actor instance binds address `tcp://127.0.0.1:5555`
 * A SUB-Socket Actor instance connects address `tcp://127.0.0.1:5555`
@@ -239,7 +238,7 @@ The Map_PubSub_Demo has an instance each of PUB-Socket Actor and SUB-Socket Acto
 <div style='page-break-after: always'></div>
 
 In the Level Blueprint, with `Event BeginPlay` the PUB-Socket Actor's function `Open` is called. With event `OnOpen (PUB-Socket)` the PUB-Socket Actor's function `Bind` is called.
-With event `OnLinked (PUB-Socket)` the SUB-Socket Actor's function `Open` is called. With event `OnOpen (SUB-Socket)` the SUB-Socket Actor's function `Connect` is called. With event `OnLinked (SUB-Socket)` a timer based event starts a looped call of the SUB-Socket Actor's function `Receive` every other centisecond.
+With event `OnLinked (PUB-Socket)` the SUB-Socket Actor's function `Open` is called. With event `OnOpen (SUB-Socket)` the SUB-Socket Actor's function `Connect` is called. With event `OnLinked (SUB-Socket)` a timer based event starts a looped call of the SUB-Socket Actor's function `Receive` every other centisecond (`Time: 0.01`).
 
 With `Event EndPlay` the Receive-Timer is cleard and invalidated, and the SUB-Socket Actor's as well as the PUB-Socket Actor's function `Close` is called.
 
@@ -324,11 +323,29 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 
 <div style='page-break-after: always'></div>
 
+## 4. Unsupported
+
+Transport Protocol:
+
+* `ipc://` &ndash; Inter Process Communication, aka UNIX domain socket
+* `ws://` and `wss://` &ndash; WebSockets over TCP
+* `tls://` &ndash; Transport Layer Security
+* `zt://` &ndash; Communication over a ZeroTier&trade; network
+* `mqtt://` &ndash; MQ Telemetry Transport (NNG&trade; does not provide with the MQTT transport protocol yet, neither does the plugin)
+
+Communication Pattern:
+
+* PAIR &ndash; simple one-to-one communication
+* BUS &ndash; simple many-to-many communication
+* REQREP &ndash; allows to build clusters of stateless services to process user requests
+* PIPELINE &ndash; aggregates messages from multiple sources and load balances them among many destinations
+* SURVEY &ndash; allows to query state of multiple applications in a single go
+
 ## A. Attribution
 
 * The word mark *Unreal&reg;* and its logo are Epic Games, Inc. trademarks or registered trademarks in the US and elsewhere (cp. Branding Guidelines and Trademark Usage, URL: [https://www.unrealengine.com/en-US/branding](https://www.unrealengine.com/en-US/branding))
 * The word marks *nanomsg&trade;* and *NNG&trade;* and its logos are trademarks of Garrett D'Amore, used with permission (cp. Trademark Policy, URL: [https://nanomsg.org/trademarks.html](https://nanomsg.org/trademarks.html))
-* The word marks *EMQ&trade;* and *NanoMQ&trade;* and its logos are trademarks of EMQ Technologies Co., Ltd.
+* The word marks *EMQ&trade;*, *EMQX&trade;* and *NanoMQ&trade;* and its logos are trademarks of EMQ Technologies Co., Ltd.
 
 ## B. References
 
