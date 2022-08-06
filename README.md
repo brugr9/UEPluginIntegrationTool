@@ -17,9 +17,9 @@ Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generat
 
 This plugin enables asynchronous, broker-less messaging using *NNG&trade; next generation of nanomsg&trade;* software from the Blueprint visual scripting system.
 
-The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an enterprise service bus or an event broker. Other use cases could be data streaming or instant messaging from or into a game.
+The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an event broker. Other use cases could be data streaming or instant messaging from or into a game.
 
-Suits well for the use with, e.g., [NanoMQ&trade;](https://nanomq.io/) which also acts as a nanomsg/NNG&trade; MQTT proxy to EMQX&trade;.
+Suits well for the use with, e.g., [NanoMQ&trade;](https://nanomq.io/) which may act as a nanomsg/NNG&trade; proxy providing with MQTT and ZeroMQ protocol.
 
 <!-- UE Marketplace : End 1/2 -->
 ---
@@ -238,7 +238,7 @@ The Map_PubSub_Demo has an instance each of PUB-Socket Actor and SUB-Socket Acto
 <div style='page-break-after: always'></div>
 
 In the Level Blueprint, with `Event BeginPlay` the PUB-Socket Actor's function `Open` is called. With event `OnOpen (PUB-Socket)` the PUB-Socket Actor's function `Bind` is called.
-With event `OnLinked (PUB-Socket)` the SUB-Socket Actor's function `Open` is called. With event `OnOpen (SUB-Socket)` the SUB-Socket Actor's function `Connect` is called. With event `OnLinked (SUB-Socket)` a timer based event starts a looped call of the SUB-Socket Actor's function `Receive` every other centisecond.
+With event `OnLinked (PUB-Socket)` the SUB-Socket Actor's function `Open` is called. With event `OnOpen (SUB-Socket)` the SUB-Socket Actor's function `Connect` is called. With event `OnLinked (SUB-Socket)` a timer based event starts a looped call of the SUB-Socket Actor's function `Receive` every other centisecond (`Time: 0.01`).
 
 With `Event EndPlay` the Receive-Timer is cleard and invalidated, and the SUB-Socket Actor's as well as the PUB-Socket Actor's function `Close` is called.
 
@@ -345,7 +345,7 @@ Communication Pattern:
 
 * The word mark *Unreal&reg;* and its logo are Epic Games, Inc. trademarks or registered trademarks in the US and elsewhere (cp. Branding Guidelines and Trademark Usage, URL: [https://www.unrealengine.com/en-US/branding](https://www.unrealengine.com/en-US/branding))
 * The word marks *nanomsg&trade;* and *NNG&trade;* and its logos are trademarks of Garrett D'Amore, used with permission (cp. Trademark Policy, URL: [https://nanomsg.org/trademarks.html](https://nanomsg.org/trademarks.html))
-* The word marks *EMQ&trade;* and *NanoMQ&trade;* and its logos are trademarks of EMQ Technologies Co., Ltd.
+* The word marks *EMQ&trade;*, *EMQX&trade;* and *NanoMQ&trade;* and its logos are trademarks of EMQ Technologies Co., Ltd.
 
 ## B. References
 
