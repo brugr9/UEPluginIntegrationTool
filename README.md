@@ -15,11 +15,11 @@ Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generat
 
 ## Description
 
-This plugin enables asynchronous, broker-less messaging using *NNG&trade; next generation of nanomsg&trade;* software from the Blueprint visual scripting system.
+This plugin enables asynchronous, broker-less messaging using *NNG&trade; next generation of nanomsg&trade;* software from the Blueprint Visual Scripting system.
 
-The delivered assets provide transporting messages over a network and can be used in games to enable direct machine-to-machine communication, internet of things integration, or interaction with an event broker. Other use cases could be data streaming or instant messaging from or into a game.
+The delivered assets provide transporting messages over a network and can be used in games to enable direct machine to machine communication, internet of things integration, or interaction with an event broker. Other use cases could be data streaming or instant messaging from or into a game.
 
-Suits well for the use with, e.g., [NanoMQ&trade;](https://nanomq.io/) which may act as a nanomsg/NNG&trade; proxy providing with MQTT and ZeroMQ protocol.
+Suits well for the use with, e.g., [NanoMQ&trade;](https://nanomq.io/) which may act as a nanomsg/NNG proxy providing with MQTT and ZeroMQ protocol.
 
 <!-- UE Marketplace : End 1/2 -->
 ---
@@ -96,8 +96,8 @@ A PUB-Socket Actor has:
 
 * Functions:
   * `Open`, `IsOpen` (returns a `Boolean`)
-  * `Bind`, `IsBound` (returns a `Boolean`)
-  * `Connect`, `IsConnected` (returns a `Boolean`)
+  * `Bind` (in NNG known as *listen*), `IsBound` (returns a `Boolean`)
+  * `Connect` (in NNG known as *dial*), `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
   * `Close`
 * Events (Delegates):
@@ -130,8 +130,8 @@ A SUB-Socket Actor has:
 
 * Functions:
   * `Open`, `IsOpen` (returns a `Boolean`)
-  * `Bind`, `IsBound` (returns a `Boolean`)
-  * `Connect`, `IsConnected` (returns a `Boolean`)
+  * `Bind` (in NNG known as *listen*), `IsBound` (returns a `Boolean`)
+  * `Connect` (in NNG known as *dial*), `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
   * `Close`
 * Events (Delegates):
@@ -201,10 +201,10 @@ In the content browser enable the listing of plugin folders by checking `Setting
 ![Screenshot of Plugin Content](Docs/ScreenshotPluginContent.jpg "Screenshot of Plugin Content")
 <br>*Fig. 3.1.: Screenshot of Content Browser with Integration Tool Content*
 
-Usually, the PUB-SUB pattern is used to connect several endpoints of distributed systems whose applications run on different machines. For the demo, we have endpoints in the same application for simplicity's sake &ndash; a PUB-Socket and a SUB-Socket are here in the level named Map_PubSub_Demo. The demo implements a PubSub-scheme as follows:
+Usually, the PUB-SUB pattern is used to connect several endpoints of distributed systems whose applications run on different machines or nodes repectively. For the demo, we have endpoints in the same application for simplicity's sake &ndash; a PUB-Socket and a SUB-Socket are here in the level named Map_PubSub_Demo. The demo implements a PubSub-scheme as follows:
 
-* A PUB-Socket Actor instance binds address `tcp://127.0.0.1:5555`
-* A SUB-Socket Actor instance connects address `tcp://127.0.0.1:5555`
+* A PUB-Socket Actor instance binds address `tcp://127.0.0.1:5555` (NNG: listen)
+* A SUB-Socket Actor instance connects address `tcp://127.0.0.1:5555` (NNG: dial)
 * Two Publisher Actor-Components (each in a cyan and a yellow cube) publish via the PUB-Socket Actor instance
 * Two Subscriber Actor-Components (both in a green cube) subscribe via the SUB-Socket Actor instance
 
@@ -215,7 +215,7 @@ Please assure to have the corresponding firewall configured to allow traffic ove
 
 <div style='page-break-after: always'></div>
 
-The cyan and the yellow cube each use a Publisher Actor-Component and loop publishing a message 'Hello from Cyan' with topic 'Cyan' or 'Hello from Yellow' with topic 'Yellow' respectively.
+The cyan and the yellow cube each use a Publisher Actor-Component and loop publishing a message `Hello from Cyan` with topic `Cyan` or `Hello from Yellow` with topic `Yellow` respectively.
 
 ![Screenshot of Blueprint BP_CubeCyan Event Graph](Docs/ScreenshotDemoActor_BP_CubeCyan.jpg "Screenshot of Blueprint BP_CubeCyan Event Graph")
 <br>*Fig. 3.3.: Screenshot of Blueprint BP_CubeCyan Event Graph*
@@ -225,7 +225,7 @@ The cyan and the yellow cube each use a Publisher Actor-Component and loop publi
 
 <div style='page-break-after: always'></div>
 
-A third, green cube uses two Subscriber Actor-Components to subscribe to topics 'C' and 'Y'&ndash;both check-boxes 'Starts With' are checked&ndash;and appends the received messages to its `TextRender` Scene-Component and prints the same to the Output Log.
+A third, green cube uses two Subscriber Actor-Components to subscribe to topics `C` and `Y`&ndash;both check-boxes `Starts With` are checked&ndash;and appends the received messages to its `TextRender` Scene-Component and prints the same to the Output Log.
 
 ![Screenshot of Blueprint BP_CubeGreen Event Graph](Docs/ScreenshotDemoActor_BP_CubeGreen.jpg "Screenshot of Blueprint BP_CubeGreen Event Graph")
 <br>*Fig. 3.5.: Screenshot of Blueprint BP_CubeGreen Event Graph*
