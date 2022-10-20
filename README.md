@@ -321,8 +321,6 @@ LogNextGenMsg: PubSocketActor1_2: Close socket done.
 [...]
 ```
 
-<div style='page-break-after: always'></div>
-
 ## 4. Unsupported
 
 Transport Protocol:
@@ -340,6 +338,8 @@ Communication Pattern:
 * REQREP &ndash; allows to build clusters of stateless services to process user requests
 * PIPELINE &ndash; aggregates messages from multiple sources and load balances them among many destinations
 * SURVEY &ndash; allows to query state of multiple applications in a single go
+
+<div style='page-break-after: always'></div>
 
 ## A. Attribution
 
