@@ -355,7 +355,20 @@ Communication Pattern:
 
 To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool"* software, please cite
 
-> Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool*, Version [#.#.#], UE [4.## or 5.#]. Unreal&reg; Marketplace. URL: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool). Copyright 2022 Roland Bruggmann aka brugr9. All Rights Reserved.
+> Bruggmann, R. (2022, April). Unreal&reg; Engine Plugin: Integration Tool, Version 1.0.1 for UE 5.0. Unreal Engine Marketplace. computer software, Epic Games. Retrieved from URL: [https://www.unrealengine.com/marketplace/en-US/product/integration-tool](https://www.unrealengine.com/marketplace/en-US/product/integration-tool)
+
+```bibtex
+@software{IntegrationTool,
+  title={Unreal Engine Plugin: Integration Tool},
+  url={https://www.unrealengine.com/marketplace/en-US/product/integration-tool},
+  journal={Unreal Engine Marketplace},
+  publisher={Epic Games},
+  author={Bruggmann, Roland},
+  version={v1.0.1, UE 5.0},
+  year={2022},
+  month={04}
+}
+```
 
 To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation"* (be it , e.g., the Readme or the Changelog), please cite
 
