@@ -375,7 +375,7 @@ To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentati
 > Bruggmann, Roland (2022). *Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentation*, \[Readme, Changelog\]. GitHub; accessed [Year Month Day]. URL: [https://github.com/brugr9/UEPluginIntegrationTool](https://github.com/brugr9/UEPluginIntegrationTool). Licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ```bibtex
-@software{Bruggmann2022,
+@misc{Bruggmann2022,
   author = {Bruggmann, Roland},
   title = {{Unreal Engine Plugin: Integration Tool — Documentation, Readme}},
   version = {v1.0.1},
