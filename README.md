@@ -379,7 +379,7 @@ To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentati
 ```bibtex
 @misc{Bruggmann2022,
   author = {Bruggmann, Roland},
-  title = {{Unreal Engine Plugin: Integration Tool — Documentation, Readme}},
+  title = {Unreal Engine Plugin: Integration Tool — Documentation, Readme},
   version = {v1.0.1},
   url = {https://github.com/brugr9/UEPluginIntegrationTool},
   year = {2022},
