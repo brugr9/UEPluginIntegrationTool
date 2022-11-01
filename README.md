@@ -19,8 +19,6 @@ This plugin enables asynchronous, broker-less messaging using *NNG&trade; next g
 
 The delivered assets provide transporting messages over a network and can be used in games to enable direct machine to machine communication, internet of things integration, or interaction with an event broker. Other use cases could be data streaming or instant messaging from or into a game.
 
-<!-- Suits well for the use with, e.g., [NanoMQ&trade;](https://nanomq.io/) which may act as a nanomsg/NNG proxy providing with MQTT and ZeroMQ protocol. -->
-
 <!-- UE Marketplace : End 1/2 -->
 ---
 
@@ -345,7 +343,6 @@ Communication Pattern:
 
 * The word mark *Unreal&reg;* and its logo are Epic Games, Inc. trademarks or registered trademarks in the US and elsewhere (cp. Branding Guidelines and Trademark Usage, URL: [https://www.unrealengine.com/en-US/branding](https://www.unrealengine.com/en-US/branding))
 * The word marks *nanomsg&trade;* and *NNG&trade;* and its logos are trademarks of Garrett D'Amore, used with permission (cp. Trademark Policy, URL: [https://nanomsg.org/trademarks.html](https://nanomsg.org/trademarks.html))
-<!-- * The word marks *EMQ&trade;*, *EMQX&trade;* and *NanoMQ&trade;* and its logos are trademarks of EMQ Technologies Co., Ltd. -->
 
 ## B. References
 
