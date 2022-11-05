@@ -206,7 +206,7 @@ Usually, the PUB-SUB pattern is used to connect several endpoints of distributed
 * Two Publisher Actor-Components (each in a cyan and a yellow cube) publish via the PUB-Socket Actor instance
 * Two Subscriber Actor-Components (both in a green cube) subscribe via the SUB-Socket Actor instance
 
-Please assure to have the corresponding firewall configured to allow traffic over localhost port 5555.
+Please assure to have the corresponding firewall configured to allow TCP traffic over localhost port 5555.
 
 ![Demo PubSub-Scheme](Docs/Demo-PubSub.jpg "Demo PubSub-Scheme")
 <br>*Fig. 3.2.: Demo PubSub-Scheme*
