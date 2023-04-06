@@ -94,8 +94,8 @@ A PUB-Socket Actor has:
 
 * Functions:
   * `Open`, `IsOpen` (returns a `Boolean`)
-  * `Bind` (in NNG known as *listen*), `IsBound` (returns a `Boolean`)
-  * `Connect` (in NNG known as *dial*), `IsConnected` (returns a `Boolean`)
+  * `Bind` via NNG *listen*, `IsBound` (returns a `Boolean`)
+  * `Connect` via NNG *dial*, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
   * `Close`
 * Events (Delegates):
@@ -128,8 +128,8 @@ A SUB-Socket Actor has:
 
 * Functions:
   * `Open`, `IsOpen` (returns a `Boolean`)
-  * `Bind` (in NNG known as *listen*), `IsBound` (returns a `Boolean`)
-  * `Connect` (in NNG known as *dial*), `IsConnected` (returns a `Boolean`)
+  * `Bind` via NNG *listen*, `IsBound` (returns a `Boolean`)
+  * `Connect` via NNG *dial*, `IsConnected` (returns a `Boolean`)
   * `IsLinked` (returns a `Boolean`)
   * `Close`
 * Events (Delegates):
