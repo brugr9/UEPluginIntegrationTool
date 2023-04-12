@@ -10,6 +10,7 @@ This document is part of *Unreal&reg; Engine Plugin: Integration Tool &ndash; Do
 <!-- UE Marketplace : Begin 1/2 -->
 
 ![FeaturedImage](Docs/FeaturedImage894x488.jpg "FeaturedImage")
+![Animation Screenshot of Demo Map PIE](Docs/DemoMapPIE.gif "Animation Screenshot of Demo Map PIE")
 
 Adds Blueprint Support for Asynchronous Messaging using *NNG&trade; next generation of nanomsg&trade;* Software
 
@@ -389,4 +390,4 @@ To acknowledge *"Unreal&reg; Engine Plugin: Integration Tool &mdash; Documentati
 
 [![Creative Commons Attribution-ShareAlike 4.0 International License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-*"Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation"* &copy; 2022 by [Roland Bruggmann](https://dev.epicgames.com/community/profile/PQBq/brugr9) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
+*"Unreal&reg; Engine Plugin: Integration Tool &ndash; Documentation"* &copy; 2022 by [Roland Bruggmann](https://dev.epicgames.com/community/profile/PQBq/brugr9) is licensed under Creative Commons Attribution-ShareAlike 4.0 International
